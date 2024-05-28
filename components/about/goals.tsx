@@ -5,7 +5,7 @@ import { aboutGoals } from '@/utils/constants'
 
 const Goals = () => {
   return (
-    <div className="container flex-col items-center justify-center" id="objetivos">
+    <div className="flex flex-col items-center justify-center" id="objetivos">
       <Subtitle subtitle="Lo que nos motiva a ser quienes somos." />
       <CardHoverEffectDemo cardsArray={aboutGoals} />
     </div>

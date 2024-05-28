@@ -4,7 +4,7 @@ import { NavigationMenuBar } from "@/components/ui/navbar/navigation-bar";
 
 const Navbar = () => {
     return ( 
-    <div className="flex justify-between items-center px-10 border-b h-40 ">
+    <div className="flex justify-between items-center px-3 border-b h-32 z-50">
        <Logo />
        <NavigationMenuBar />
        <ActionButtons />

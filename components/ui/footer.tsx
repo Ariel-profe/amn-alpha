@@ -1,7 +1,5 @@
-import {
-    RxDiscordLogo,
-    RxGithubLogo
-  } from "react-icons/rx";
+import { CiFacebook } from "react-icons/ci";
+import { FaInstagram, FaWhatsapp  } from "react-icons/fa6";
   
   import { FaYoutube } from "react-icons/fa";
 import Link from "next/link";
@@ -11,29 +9,29 @@ import Link from "next/link";
     const year = new Date().getFullYear();
   
     return (
-      <div className="w-full h-full text-slate-800 shadow-lg py-10 ">
+      <div className="relative w-full h-full text-slate-800 dark:text-slate-300 shadow-lg py-10 ">
           <div className="w-full flex flex-col items-center justify-center m-auto">
               <div className="w-full h-full flex flex-row items-start justify-around flex-wrap">
                   
                   <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                       <div className="font-bold text-[16px]">Redes sociales</div>
-                      <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                          <FaYoutube />
+                      <a href="" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
+                          <FaInstagram />
                           <span className="text-[15px] ml-[6px]">Instagram</span>    
-                      </p>
-                      <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                          <RxGithubLogo />
-                          <span className="text-[15px] ml-[6px]">Twitter</span>    
-                      </p>
-                      <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                          <RxDiscordLogo />
-                          <span className="text-[15px] ml-[6px]">Linkedin</span>    
-                      </p>
+                      </a>
+                      <a href="" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
+                          <CiFacebook />
+                          <span className="text-[15px] ml-[6px]">Facebook</span>    
+                      </a>
+                      <a href="" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
+                          <FaWhatsapp />
+                          <span className="text-[15px] ml-[6px]">Whatsapp</span>    
+                      </a>
                   </div>
 
                   <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                     <div className="font-bold text-[16px]">Ayuda</div>
-                    <Link href={"/contacto"} className="flex flex-row items-center my-[15px]">
+                    <Link href={"/nosotros"} className="flex flex-row items-center my-[15px]">
                         ¿Quiénes somos?    
                     </Link>
                     <p className="flex flex-row items-center my-[15px]">
@@ -46,10 +44,9 @@ import Link from "next/link";
   
                   <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                       <div className="font-bold text-[16px]">Comunidad</div>
-                      <p className="flex flex-row items-center my-[15px]">
-                          Creamos posibilidades para conectar al mundo. <br />
-                          &copy; AMN Consultora Informatica {year}. <br /> Todos los derechos reservados
-                      </p>
+                      <p className="flex flex-row items-center my-[15px]">Creamos posibilidades para conectar al mundo.</p>
+                      <p className="flex flex-row items-center my-[15px]">Todos los derechos reservados.</p>
+                      <p className="flex flex-row items-center my-[15px]">&copy; AMN Consultora Informática {year}.</p>
                   </div>
               </div>
           </div>

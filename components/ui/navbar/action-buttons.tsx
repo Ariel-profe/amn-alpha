@@ -1,55 +1,57 @@
-
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { RiMenu3Fill } from "react-icons/ri";
 
 import {
     Sheet,
+    SheetClose,
     SheetContent,
     SheetDescription,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
-  } from "@/components/ui/sheet"
-  
-  import { AlignJustify } from "lucide-react";
+} from "@/components/ui/sheet"
 
-  import Link from "next/link";
-
+import { ThemeToggle } from "../theme-toggle";
 
 const ActionButtons = () => {
     return ( 
     <div>
-        <div className="md:hidden">
+        <div className="flex md:hidden">
             <Sheet>
                 <SheetTrigger>
-                    <AlignJustify />
+                    <RiMenu3Fill size={30} />
                 </SheetTrigger>
                 <SheetContent>
                     <SheetHeader>
+                        <ThemeToggle />
                         <SheetDescription>
-                            <div className="flex flex-col space-y-4 items-start w-full text-lg text-black mt-10">
-                                <Link href="/"> Comencemos </Link>
+                            <div className="flex flex-col space-y-4 items-start w-full text-lg text-amn-darker dark:text-slate-300 mt-10">
+                                <SheetClose asChild> 
+                                <Link href="/"> Inicio </Link>
+                                </SheetClose>
+                                <SheetClose asChild> 
                                 <Link href="/nosotros"> Nosotros </Link>
+                                </SheetClose>
+                                <SheetClose asChild> 
                                 <Link href="/servicios"> Servicios </Link>
+                                </SheetClose>
+                                <SheetClose asChild> 
                                 <Link href="/proyectos"> Proyectos </Link>
-                                <Link href="/contacto"> Contacto </Link>
+                                </SheetClose>
+                                <SheetClose asChild> 
+                                <Link  href="/contacto"> Contacto </Link>
+                                </SheetClose>
+                               
                             </div>
                         </SheetDescription>
                     </SheetHeader>
                 </SheetContent>
             </Sheet>
-            </div>
+        </div>
 
-
-            <div className="hidden md:flex md:space-x-4">
-                <Button
-                className="text-md"
-                variant="ghost"
-                >
-                    Modo
-                </Button>
-            </div>
- 
-
+        <div className="hidden md:flex">
+            <ThemeToggle />
+        </div>
     </div> 
     );
 }

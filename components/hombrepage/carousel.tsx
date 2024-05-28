@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { carousel_images } from "@/utils/navigation-links";
-import { Subtitle } from "./ui/subtitle";
+import { Subtitle } from "../ui/subtitle";
 
 const Carousel = () => {
 
@@ -23,10 +23,10 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div id="marcas" className="py-20 px-3 lg:px-10">
+    <div id="marcas" className="lg:py-20 px-3 lg:px-10">
       <Subtitle subtitle={"Estas compañías confían en nosotros"} />
 
-      <div className="grid grid-cols-3 p-4 md:flex">
+      <div className="grid grid-cols-2 md:grid-cols-3 p-4 md:flex">
         <AnimatePresence
         custom={currentImageIndex}>
             {carousel_images.map((image, index) => (

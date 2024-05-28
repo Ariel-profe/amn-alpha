@@ -61,6 +61,7 @@ module.exports = {
           semidark: '#A3426C',
           light: '#EE7779',
           semilight: '#F5C6A4',
+          darker: '#040115'
         }
       },
       borderRadius: {

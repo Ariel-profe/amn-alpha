@@ -2,8 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
 import Navbar from '@/components/ui/navbar/page'
-import { TracingBeam } from '@/components/ui/tracing-beam'
 import { Footer } from '@/components/ui/footer'
+import { ThemeProvider } from '@/components/theme-provider'
 
 const font = Outfit({ subsets: ['latin'] })
 
@@ -18,18 +18,23 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${font.className} bg-gradient-to-br from-slate-50/50 to-red-50/50 overflow-y-scroll overflow-x-hidden`}>
+    <html lang="en" className='dark'>
       <link rel="icon" href="/iso1.svg" sizes="any" />
-      <div className='relative flex flex-col'>
-        <Navbar />
-         <main className='flex-grow shadow-md pb-20'>
-          <TracingBeam>
-            {children}
-          </TracingBeam>
-        </main>
-        <Footer />
-      </div>
+      <body className={`${font.className} bg-slate-50 dark:bg-slate-900 overflow-y-scroll overflow-x-hidden`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+        <div className='relative flex flex-col'>
+          <Navbar />
+           <main className='flex-grow shadow-md pb-20'>
+              {children}
+          </main>
+          <Footer />
+        </div>
+      </ThemeProvider>
       </body>
     </html>
   )

@@ -4,7 +4,7 @@ import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
 const Company = () => {
     return ( 
-        <div id="desarrollo_y_programacion" className="flex flex-col md:flex-row md:justify-evenly my-20">
+        <div id="desarrollo_y_programacion" className="flex flex-col md:flex-row md:justify-evenly my-20 relative">
             <div className="flex-col xl:flex-row gap-6 flex">
                 <div className="xl:w-1/3 w-full">
                     <Image
@@ -12,7 +12,7 @@ const Company = () => {
                     alt="work icons"
                     height={650}
                     width={650}
-                    className="bg-slate-800 rounded-xl"
+                    className="bg-amn-dark rounded-xl"
                     />
                 </div>
 

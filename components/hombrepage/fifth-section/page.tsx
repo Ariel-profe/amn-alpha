@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { HoverEffect } from '../../ui/card-hover/card-hover-effect';
 import Link from "next/link";
 
 const FifthSection = () => {
     return (
-        <div className="md:py-20 p-10">
-            <div className="border-[1px] md:w-2/3 mx-auto p-10 rounded-xl">
+            <div className=" mx-auto p-10 rounded-xl mt-10">
                 <div className="text-4xl font-bold mb-5">
                     Comienza a construir tu negocio <span className="text-amn-light">hoy</span>. 
                 </div>
@@ -18,7 +16,7 @@ const FifthSection = () => {
                     </Link>
                 </Button>
             </div>
-        </div> );
+        );
 }
  
 export default FifthSection;

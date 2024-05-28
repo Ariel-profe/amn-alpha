@@ -8,7 +8,7 @@ const Features = () => {
         <div className="justify-between md:w-2/3">
           <Title title={"Proporcionamos servicios para dar soluciones personalizadas."} className="max-w-[600px]" />
 
-          <div className="text-2xl mb-8">
+          <div className="text-2xl mb-8 dark:text-slate-300">
             Nos actualizamos constantemente para vos y tu empresa.
           </div>
           <Button size={"lg"}>
@@ -16,7 +16,7 @@ const Features = () => {
           </Button>
         </div>
 
-        <div>
+        <div className="mt-10 md:mt-0">
           <img src="/amn-iso.png" alt="amn-logo" className="md:w-[500px] animate-spin-slow" />
         </div>      
       </div>

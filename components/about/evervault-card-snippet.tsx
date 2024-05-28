@@ -11,7 +11,7 @@ export function EvervaultCardSnippet() {
 
       <EvervaultCard text="mouse" />
 
-      <h2 className="text-amn-dark  mt-4 text-sm font-light">
+      <h2 className="text-amn-dark mt-4 text-sm font-light">
         Acerca el mouse y revela un excelente effecto.
       </h2>
     </div>

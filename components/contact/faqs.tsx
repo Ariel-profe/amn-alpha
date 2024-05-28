@@ -4,19 +4,16 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
-import { Title } from "../ui/title";
-
-
 
 const Faqs = () => {
     return ( 
-        <div className="mt-10 md:py-10 bg-slate-800 w-full rounded-3xl">
+        <div className="mt-10 md:py-10 w-full" id="faq">
           <div className="p-10 md:p-4 md:px-20">
             <div className="flex flex-col md:flex-row items-center gap-x-4">
                 <div className="py-3 font-semibold text-3xl md:text-6xl text-gradient bg-gradient-to-r from-rose-500 to-amn-light bg-clip-text text-transparent">
                 ¿Alguna pregunta?
                 </div>
-                <div className="py-3 font-normal text-2xl md:text-5xl text-slate-300">
+                <div className="py-3 font-normal text-2xl md:text-5xl text-amn-darker dark:text-slate-300">
                 Te las respondemos.
                 </div>
 

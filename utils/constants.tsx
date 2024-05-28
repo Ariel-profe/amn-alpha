@@ -96,4 +96,11 @@ export const features = [
         description: "Get 24/7 support from our team to help you with any issues you have.",
         alt: "Customizable",
       },
-    ]
+    ];
+
+    export const amn_services = [
+      "Soporte",
+      "Software",
+      "Hardware",
+      "Seguridad"
+    ];

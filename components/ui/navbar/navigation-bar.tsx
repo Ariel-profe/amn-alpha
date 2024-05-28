@@ -2,7 +2,6 @@
 'use client';
 
 import { forwardRef } from "react";
-import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 
@@ -34,22 +33,22 @@ export function NavigationMenuBar() {
                     >
                       <Logo  />
                       <div className="mb-2 mt-4 text-lg font-medium">
-                       AMN - Consultora Informática
+                       AMN <br /> Consultora Informática
                       </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
+                      <p className="text-xs leading-tight text-muted-foreground">
                       Impulsamos tu éxito digital
                       </p>
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="#marcas" title="Marcas">
-                    Quienes confían en nosotros.
+                <ListItem href="/#marcas" title="Marcas">
+                  Quienes confían en nosotros.
                 </ListItem>
-                <ListItem href="#servicios" title="Características">
-                    Servicios generales.
+                <ListItem href="/#servicios" title="Servicios">
+                  Lo que ofrecemos.
                 </ListItem>
-                <ListItem title="Tecnologías">
-                  Nuestras bases del desarrollo.
+                <ListItem title="Identidad">
+                  Nuestras bases.
                 </ListItem>
               </ul>
             </NavigationMenuContent>
