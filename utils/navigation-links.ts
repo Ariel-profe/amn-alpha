@@ -19,11 +19,5 @@ export const carousel_images = [
   {url: "/images/logo/logo-4.svg", alt: "Logo"},
   {url: "/images/logo/logo-5.svg", alt: "Logo"},
   {url: "/images/logo/logo-6.svg", alt: "Logo"},
-  {url: "/images/logo/logo-7.svg", alt: "Logo"},
-  {url: "/images/logo/logo-8.svg", alt: "Logo"},
-  {url: "/images/logo/logo-9.svg", alt: "Logo"},
-  {url: "/images/logo/logo-10.svg", alt: "Logo"},
-  {url: "/images/logo/logo-11.svg", alt: "Logo"},
-  {url: "/images/logo/logo-12.svg", alt: "Logo"},
-  {url: "/images/logo/logo-13.svg", alt: "Logo"}
+  {url: "/images/logo/logo-7.svg", alt: "Logo"}
 ];

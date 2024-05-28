@@ -43,7 +43,6 @@ const Plans = () => {
 
                         <Button> Explorar </Button>
                     </div>
-                
                 ))}
         </div>
     </div> );

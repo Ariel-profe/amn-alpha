@@ -24,8 +24,7 @@ const ActionButtons = () => {
                 <SheetContent>
                     <SheetHeader>
                         <ThemeToggle />
-                        <SheetDescription>
-                            <div className="flex flex-col space-y-4 items-start w-full text-lg text-amn-darker dark:text-slate-300 mt-10">
+                        <SheetDescription className="flex flex-col space-y-4 items-start w-full text-lg text-amn-darker dark:text-slate-300 mt-10">
                                 <SheetClose asChild> 
                                 <Link href="/"> Inicio </Link>
                                 </SheetClose>
@@ -41,8 +40,6 @@ const ActionButtons = () => {
                                 <SheetClose asChild> 
                                 <Link  href="/contacto"> Contacto </Link>
                                 </SheetClose>
-                               
-                            </div>
                         </SheetDescription>
                     </SheetHeader>
                 </SheetContent>

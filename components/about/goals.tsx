@@ -1,7 +1,7 @@
-import React from 'react'
-import { Subtitle } from '../ui/subtitle'
-import { CardHoverEffectDemo } from '../ui/card-hover'
-import { aboutGoals } from '@/utils/constants'
+
+import { CardHoverEffectDemo } from '@/components/ui/card-hover';
+import { aboutGoals } from '@/utils/constants';
+import { Subtitle } from '@/components/ui/subtitle';
 
 const Goals = () => {
   return (

@@ -14,7 +14,7 @@ import Link from "next/link";
               <div className="w-full h-full flex flex-row items-start justify-around flex-wrap">
                   
                   <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                      <div className="font-bold text-[16px]">Redes sociales</div>
+                      <div className="font-bold text-lg">Redes sociales</div>
                       <a href="" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
                           <FaInstagram />
                           <span className="text-[15px] ml-[6px]">Instagram</span>    
@@ -30,7 +30,7 @@ import Link from "next/link";
                   </div>
 
                   <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-[16px]">Ayuda</div>
+                    <div className="font-bold text-lg">Ayuda</div>
                     <Link href={"/nosotros"} className="flex flex-row items-center my-[15px]">
                         ¿Quiénes somos?    
                     </Link>
@@ -43,7 +43,7 @@ import Link from "next/link";
                   </div>
   
                   <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                      <div className="font-bold text-[16px]">Comunidad</div>
+                      <div className="font-bold text-lg">Comunidad</div>
                       <p className="flex flex-row items-center my-[15px]">Creamos posibilidades para conectar al mundo.</p>
                       <p className="flex flex-row items-center my-[15px]">Todos los derechos reservados.</p>
                       <p className="flex flex-row items-center my-[15px]">&copy; AMN Consultora Informática {year}.</p>

@@ -26,34 +26,30 @@ const Carousel = () => {
     <div id="marcas" className="lg:py-20 px-3 lg:px-10">
       <Subtitle subtitle={"Estas compañías confían en nosotros"} />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 p-4 md:flex">
-        <AnimatePresence
-        custom={currentImageIndex}>
-            {carousel_images.map((image, index) => (
-                <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity : index === currentImageIndex ? 1 : 0.8,
-                  scale : index === currentImageIndex ? 1.2 : 1,
-                  transition: { duration: 0.5 },
-                }}
-
-                className="flex items-center justify-center h-40 w-40"
-                exit={{ opacity: 0 }}
-                custom={index}
-                transition={{ 
-                    opacity: { duration: 0.5 },
-                }}>
-                  <Image
-                    src={image.url}
-                    alt={image.alt}
-                    width={200}
-                    height={200}
-                    className="object-contain h-20 w-20 items-center justify-center flex mx-auto"
-                  />
-                </motion.div>
-            ))}
+      <div className="grid grid-cols-2 md:grid-cols-3 mx-auto w-full p-4 md:flex">
+        <AnimatePresence custom={currentImageIndex}>
+          {carousel_images.map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity : index === currentImageIndex ? 1 : 0.8,
+                scale : index === currentImageIndex ? 1.2 : 1,
+                transition: { duration: 0.5 },
+              }}
+              className="flex items-center justify-center h-40 w-full"
+              exit={{ opacity: 0 }}
+              custom={index}
+              transition={{ opacity: { duration: 0.5 }}}>
+                <Image
+                  src={image.url}
+                  alt={image.alt}
+                  width={200}
+                  height={200}
+                  className="object-contain h-20 w-20 items-center justify-center flex mx-auto"
+                />
+              </motion.div>
+          ))}
         </AnimatePresence>
       </div>
     </div>

@@ -1,7 +1,7 @@
 "use client";
 
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 
 import { cn } from "@/lib/utils";
  
@@ -14,10 +14,10 @@ export function ContactForm() {
     <div className="flex items-center justify-between w-full h-full" id="formulario">
         <div className="my-20 w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-slate-800/40 ">
         <h2 className="font-bold text-2xl text-slate-800 dark:text-neutral-200">
-            Bienvenidos a AMN
+          Bienvenidos a AMN
         </h2>
         <p className="text-slate-600 text-lg max-w-sm mt-2 dark:text-neutral-300">
-            Envianos un email con cualquier duda que tengas y las responderemos al instante.
+          Envianos un email con cualquier duda que tengas y las responderemos al instante.
         </p>
 
         <div className="flex flex-col lg:flex-row w-full gap-5 justify-between mt-10">
