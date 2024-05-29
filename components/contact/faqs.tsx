@@ -7,8 +7,7 @@ import {
 
 const Faqs = () => {
     return ( 
-        <div className="mt-10 md:py-10 w-full" id="faq">
-          <div className="p-10 md:p-4 md:px-20">
+        <div className="mt-10 w-full" id="faq">
             <div className="flex flex-col md:flex-row items-center gap-x-4">
                 <div className="py-3 font-semibold text-3xl md:text-6xl text-gradient bg-gradient-to-r from-rose-500 to-amn-light bg-clip-text text-transparent">
                 ¿Alguna pregunta?
@@ -51,7 +50,6 @@ const Faqs = () => {
                     </AccordionContent>
                 </AccordionItem>
             </Accordion>
-        </div>
     </div> 
     );
 }

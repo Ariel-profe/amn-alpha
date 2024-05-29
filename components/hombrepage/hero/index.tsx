@@ -1,3 +1,4 @@
+import { BrandingVideo } from "../branding-video";
 
 const Hero = () => {
     return ( 
@@ -11,11 +12,7 @@ const Hero = () => {
                 Impulsamos tu éxito digital
             </p>
 
-            <div className="lg:pt-10">
-                <video className="rounded-xl" autoPlay muted loop>
-                    <source src="/content/hero-1.mp4" type="video/mp4" />
-                </video>
-            </div>
+           <BrandingVideo src="/content/hero-1.mp4" />
         </div>
     </section> );
 }

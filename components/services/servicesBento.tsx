@@ -37,8 +37,8 @@ const ServicesBento = () => {
 
             <div className="absolute z-1 bottom-5 px-10 flex flex-col lg:flex-row items-center justify-between w-full">
                 <div className="max-w-[600px]">
-                    <h4 className="text-amn-light lg:text-3xl mb-4">SEGURIDAD Y BASE DE DATOS</h4>
-                    <p className="text-xl mb-[3rem] text-slate-300 hidden lg:block">
+                    <h4 className="text-amn-light lg:text-4xl mb-4">SEGURIDAD Y BASE DE DATOS</h4>
+                    <p className="lg:text-3xl mb-[3rem] text-slate-300 hidden lg:block">
                         Potenciamos el uso de tus equipos tecnologicos para obtener el mayor rendimiento posible.
                     </p>
                 </div>

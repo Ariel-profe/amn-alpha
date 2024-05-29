@@ -250,8 +250,8 @@ export const projects:IProject[] = [
     },
     {
       id: 20,
-      title: 'Manejo de servidores',
-      category: 'servicio it',
+      title: 'Marketing y Diseño gráfico',
+      category: 'marketing',
       client: 'solange rodríguez',
       img: "/works/20-solange/portada.png",
       desc: `Diseño digital sobre Terapia Psicológica, donde los pacientes puedan obtener información relevante sobre el profesional que los atenderá, manera de trabajo, formas de pago y datos de contacto.`,

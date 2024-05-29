@@ -2,6 +2,7 @@
 'use client';
 
 import { forwardRef } from "react";
+import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils"
 
@@ -18,11 +19,14 @@ import Logo from "./logo"
 import { about, services } from "@/utils/navigation-links"
 
 export function NavigationMenuBar() {
+
+  const pathname = usePathname();
+
     return (
       <NavigationMenu>
         <NavigationMenuList className="hidden md:flex md:space-x-4">
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Inicio</NavigationMenuTrigger>
+            <NavigationMenuTrigger className={`${pathname === "/" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>Inicio</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -54,7 +58,7 @@ export function NavigationMenuBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Nosotros</NavigationMenuTrigger>
+            <NavigationMenuTrigger className={`${pathname === "/nosotros" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`} >Nosotros</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {about.map((component) => (
@@ -71,7 +75,7 @@ export function NavigationMenuBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Servicios</NavigationMenuTrigger>
+            <NavigationMenuTrigger className={`${pathname === "/servicios" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`} >Servicios</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {services.map((component) => (
@@ -87,13 +91,13 @@ export function NavigationMenuBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-              <NavigationMenuLink className="font-medium" href="/proyectos">
+              <NavigationMenuLink className={`${pathname === "/proyectos" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium`} href="/proyectos">
                 Proyectos
               </NavigationMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-              <NavigationMenuLink className="font-medium" href="/contacto">
+              <NavigationMenuLink className={`${pathname === "/contacto" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium`} href="/contacto">
                 Contacto
               </NavigationMenuLink>
           </NavigationMenuItem>

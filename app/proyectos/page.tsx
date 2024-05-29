@@ -67,7 +67,7 @@ const ProjectsPage = () => {
   return (
     <div className="px-3 lg:px-10 mt-10 lg:mt-20 relative">
       <Title title={"Nuestros proyectos"} className="text-center w-full" />
-      <div className="flex flex-col lg:flex-row items-start gap-5 w-full">
+      <div className="flex flex-col lg:flex-row items-start gap-5 w-full pt-5">
         <Categories categories={categories} filterItems={filterItems} isSelected={isSelected} />
         <ProjectList projects={currentProjects} setProjectSelected={setProjectSelected} setOpenModal={setOpenModal} />
       </div>
@@ -120,7 +120,7 @@ const ProjectsPage = () => {
                 <h3 className="text-xl lg:text-3xl">{projectSelected.title}</h3>
                 <p className="dark:text-slate-400 lg:text-xl">{projectSelected.desc}</p>
 
-                <Button variant="outline">Visitar</Button>
+                {projectSelected.link && <Button variant="outline"><a href={projectSelected.link} target="_blank">Visitar</a></Button>}
 
                 <div className="flex flex-col justify-center gap-3">
                 {projectSelected.tags?.map(tag => (
