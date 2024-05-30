@@ -19,9 +19,9 @@ const features = [
 const Plans = () => {
     return ( 
     <div className="flex flex-col justify-center items-center">
-        <Subtitle subtitle="Planes de negocio." />
+        <Subtitle subtitle="Planes de negocio" />
         <div className="text-2xl text-amn-darker dark:text-slate-300 text-center md:text-4xl font-bold md:py-10">
-            Para que cumplas tus sueños con nuestros abordajes.
+            Para que cumplas tus sueños con nuestros abordajes
         </div>
 
         <div className="flex flex-col lg:flex-row gap-3 mt-5">

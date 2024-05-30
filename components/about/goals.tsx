@@ -6,7 +6,7 @@ import { Subtitle } from '@/components/ui/subtitle';
 const Goals = () => {
   return (
     <div className="flex flex-col items-center justify-center" id="objetivos">
-      <Subtitle subtitle="Lo que nos motiva a ser quienes somos." />
+      <Subtitle subtitle="Lo que nos motiva a ser quienes somos" />
       <CardHoverEffectDemo cardsArray={aboutGoals} />
     </div>
   )

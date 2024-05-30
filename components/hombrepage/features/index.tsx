@@ -6,10 +6,10 @@ const Features = () => {
     return ( 
       <div className="container md:flex-row flex-col items-center flex justify-between pb-10">
         <div className="justify-between md:w-2/3">
-          <Title title={"Proporcionamos servicios para dar soluciones personalizadas."} className="max-w-[600px]" />
+          <Title title={"Proporcionamos servicios para dar soluciones personalizadas"} className="max-w-[600px]" />
 
           <div className="text-2xl mb-8 dark:text-slate-300">
-            Nos actualizamos constantemente para vos y tu empresa.
+            Nos actualizamos constantemente para vos y tu empresa
           </div>
           <Button size={"lg"}>
             <Link href={"/servicios"}>Servicios</Link>

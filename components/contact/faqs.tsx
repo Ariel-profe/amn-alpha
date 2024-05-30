@@ -13,7 +13,7 @@ const Faqs = () => {
                 ¿Alguna pregunta?
                 </div>
                 <div className="py-3 font-normal text-2xl md:text-5xl text-amn-darker dark:text-slate-300">
-                Te las respondemos.
+                Te las respondemos
                 </div>
 
             </div>

@@ -412,11 +412,8 @@ export function GlobeDemo() {
           className="div"
         >
           <h2 className="text-center text-xl md:text-3xl font-bold text-amn-darker dark:text-white">
-            Gestionamos tecnologías que <span className="text-amn-light border-b border-amn-light">ayudan a potenciar</span> industrias y empresas.
+            Gestionamos tecnologías que <span className="text-amn-light border-b border-amn-light">ayudan a potenciar</span> industrias y empresas
           </h2>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-300 max-w-md mt-4 mx-auto">
-            Da un salto de calidad en el rubro y ponte al frente de la competencia.
-          </p>
         </motion.div>
        
         <div className="absolute w-full lg:-bottom-8 h-80 lg:h-full z-10">

@@ -23,7 +23,7 @@ export const PaginationDemo:FC<Props> = ({ projectsPerPage, totalPosts, paginate
   }
 
   return (
-    <Pagination>
+    <Pagination className="mt-7">
       <PaginationContent className='flex items-center justify-center gap-x-3'>
         {pageNumbers.map(number => (
           <PaginationItem key={number}>
