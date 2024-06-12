@@ -1,4 +1,3 @@
-
 'use client';
 
 import { forwardRef } from "react";
@@ -17,6 +16,7 @@ import {
 
 import Logo from "./logo"
 import { about, services } from "@/utils/navigation-links"
+import Link from "next/link";
 
 export function NavigationMenuBar() {
 
@@ -24,14 +24,14 @@ export function NavigationMenuBar() {
 
     return (
       <NavigationMenu>
-        <NavigationMenuList className="hidden md:flex md:space-x-4">
+        <NavigationMenuList className="hidden lg:flex md:space-x-4">
           <NavigationMenuItem>
             <NavigationMenuTrigger className={`${pathname === "/" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>Inicio</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
-                    <a
+                    <Link
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/"
                     >
@@ -42,7 +42,7 @@ export function NavigationMenuBar() {
                       <p className="text-xs leading-tight text-muted-foreground">
                       Impulsamos tu éxito digital
                       </p>
-                    </a>
+                    </Link>
                   </NavigationMenuLink>
                 </li>
                 <ListItem href="/#marcas" title="Marcas">
@@ -66,7 +66,6 @@ export function NavigationMenuBar() {
                     key={component.title}
                     title={component.title}
                     href={`/nosotros#${component.href}`}
-                
                   >
                     {component.description}
                   </ListItem>
@@ -91,15 +90,11 @@ export function NavigationMenuBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-              <NavigationMenuLink className={`${pathname === "/proyectos" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium`} href="/proyectos">
-                Proyectos
-              </NavigationMenuLink>
+          <Link className={`${pathname === "/proyectos" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium`} href="/proyectos">Proyectos</Link>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-              <NavigationMenuLink className={`${pathname === "/contacto" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium`} href="/contacto">
-                Contacto
-              </NavigationMenuLink>
+              <Link className={`${pathname === "/contacto" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium`} href="/contacto">Contacto</Link>
           </NavigationMenuItem>
         
         </NavigationMenuList>
@@ -110,11 +105,12 @@ export function NavigationMenuBar() {
   const ListItem = forwardRef<
     React.ElementRef<"a">,
     React.ComponentPropsWithoutRef<"a">
-  >(({ className, title, children, ...props }, ref) => {
+  >(({ className, title, children, href = "", ...props }, ref) => {
     return (
       <li>
         <NavigationMenuLink asChild>
-          <a
+          <Link
+            href={href}
             ref={ref}
             className={cn(
               "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
@@ -126,7 +122,7 @@ export function NavigationMenuBar() {
             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
               {children}
             </p>
-          </a>
+          </Link>
         </NavigationMenuLink>
       </li>
     )

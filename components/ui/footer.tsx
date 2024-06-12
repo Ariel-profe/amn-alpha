@@ -9,41 +9,41 @@ import Link from "next/link";
     const year = new Date().getFullYear();
   
     return (
-      <div className="relative w-full h-full text-slate-800 dark:text-slate-300 shadow-lg py-10 ">
+      <div className="relative w-full h-full text-slate-800 dark:text-slate-300 shadow-lg py-10 px-3 ">
           <div className="w-full flex flex-col items-center justify-center m-auto">
-              <div className="w-full h-full flex flex-row items-start justify-around flex-wrap">
+              <div className="w-full h-full flex flex-row items-start justify-around flex-wrap px-3">
                   
                   <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                      <div className="font-bold text-lg">Redes sociales</div>
+                      <div className="font-bold text-sm lg:text-lg">Redes sociales</div>
                       <a href="" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
                           <FaInstagram />
-                          <span className="text-[15px] ml-[6px]">Instagram</span>    
+                          <span className="text-sm ml-[6px]">Instagram</span>    
                       </a>
                       <a href="" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
                           <CiFacebook />
-                          <span className="text-[15px] ml-[6px]">Facebook</span>    
+                          <span className="text-sm ml-[6px]">Facebook</span>    
                       </a>
                       <a href="" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
                           <FaWhatsapp />
-                          <span className="text-[15px] ml-[6px]">Whatsapp</span>    
+                          <span className="text-sm ml-[6px]">Whatsapp</span>    
                       </a>
                   </div>
 
                   <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                    <div className="font-bold text-lg">Ayuda</div>
+                    <div className="font-bold text-sm lg:text-lg">Ayuda</div>
                     <Link href={"/nosotros"} className="flex flex-row items-center my-[15px]">
                         ¿Quiénes somos?    
                     </Link>
                     <p className="flex flex-row items-center my-[15px]">
-                        <Link href={"/contacto#formulario"} className="text-[15px] ml-[6px]">¿Cómo me contacto?</Link>    
+                        <Link href={"/contacto#formulario"} className="text-sm ml-[6px]">¿Cómo me contacto?</Link>    
                     </p>
                     <p className="flex flex-row items-center my-[15px]">
-                        <Link href={"/contacto#faq"} className="text-[15px] ml-[6px]">FAQ</Link>    
+                        <Link href={"/contacto#faq"} className="text-sm ml-[6px]">FAQ</Link>    
                     </p>
                   </div>
   
-                  <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
-                      <div className="font-bold text-lg">Comunidad</div>
+                  <div className=" h-auto flex flex-col items-center justify-start">
+                      <div className="font-bold text-sm lg:text-lg">Comunidad</div>
                       <p className="flex flex-row items-center my-[15px]">Creamos posibilidades para conectar al mundo.</p>
                       <p className="flex flex-row items-center my-[15px]">Todos los derechos reservados.</p>
                       <p className="flex flex-row items-center my-[15px]">&copy; AMN Consultora Informática {year}.</p>

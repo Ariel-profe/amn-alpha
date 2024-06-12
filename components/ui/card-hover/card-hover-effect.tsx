@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export const HoverEffect = ({
   items,
@@ -16,7 +17,13 @@ export const HoverEffect = ({
   }[];
   className?: string;
 }) => {
+
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const {t} = useTranslation();
+
+  const newTitle = t("services_titles").split("."); 
+  const newDescription = t("services_descriptions").split("."); 
 
   return (
     <div
@@ -27,7 +34,7 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <div
-       key={item?.title}
+          key={item?.title}
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -35,7 +42,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-amn-dark block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-slate-400 dark:bg-slate-700 block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -51,8 +58,8 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <div className="flex items-center">{item.icon}</div>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardTitle>{ newTitle[idx]}</CardTitle>
+            <CardDescription>{newDescription[idx]}</CardDescription>
           </Card>
         </div>
       ))}
@@ -70,7 +77,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full  overflow-hidden bg-amn-darker border border-transparent group-hover:border-slate-800 relative z-20",
+        "rounded-2xl h-full w-full overflow-hidden bg-slate-500 dark:bg-slate-800 border border-transparent group-hover:border-slate-800 relative z-20",
         className
       )}
     >

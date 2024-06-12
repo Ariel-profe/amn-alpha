@@ -46,7 +46,7 @@ const TextGenerateEffect = ({
   return (
     <div className={cn("font-normal", className)}>
       <div className="mt-5 lg:mt-10">
-        <div className="text-amn-darker dark:text-slate-300 text-xl lg:text-4xl leading-loose tracking-wide text-justify">
+        <div className="text-amn-darker dark:text-slate-300 text-xl lg:text-3xl leading-loose tracking-wide text-justify">
           {renderWords()}
         </div>
       </div>

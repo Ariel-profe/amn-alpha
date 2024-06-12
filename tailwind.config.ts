@@ -62,7 +62,12 @@ module.exports = {
           light: '#EE7779',
           semilight: '#F5C6A4',
           darker: '#040115'
-        }
+        },
+      },
+      backgroundImage: {
+        "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
+        "conic-gradient":
+          "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -91,7 +96,7 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    addVariablesForColors
+    addVariablesForColors,
   ],
 }
 

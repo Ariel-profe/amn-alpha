@@ -7,23 +7,26 @@ import {
     SheetContent,
     SheetDescription,
     SheetHeader,
-    SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
 
 import { ThemeToggle } from "../theme-toggle";
+import LanguageChanger from "@/components/language-changer";
 
 const ActionButtons = () => {
     return ( 
     <div>
-        <div className="flex md:hidden">
+        <div className="flex lg:hidden">
             <Sheet>
                 <SheetTrigger>
                     <RiMenu3Fill size={30} />
                 </SheetTrigger>
                 <SheetContent>
                     <SheetHeader>
-                        <ThemeToggle />
+                        <div className="flex items-center gap-x-1 mb-10">
+                            <ThemeToggle />
+                            <LanguageChanger />
+                        </div>
                         <SheetDescription className="flex flex-col space-y-4 items-start w-full text-lg text-amn-darker dark:text-slate-300 mt-10">
                                 <SheetClose asChild> 
                                 <Link href="/"> Inicio </Link>
@@ -46,8 +49,9 @@ const ActionButtons = () => {
             </Sheet>
         </div>
 
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
             <ThemeToggle />
+            <LanguageChanger />
         </div>
     </div> 
     );

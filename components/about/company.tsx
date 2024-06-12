@@ -7,7 +7,7 @@ const Company = () => {
     return (   
     <div id="empresa" className="mt-5 lg:mt-10">
         <div className="mx-auto relative w-full">
-            <Subtitle subtitle="Te mostramos nuestras oficinas" />
+            <Subtitle subtitle="Este es nuestro lugar en el mundo" />
             <p className="mt-4 lg:text-xl font-normal text-slate-500 max-w-lg text-center mx-auto px-4">
                 Creamos, diseñamos y desarrollamos en un ambiente único y agradable
             </p>
