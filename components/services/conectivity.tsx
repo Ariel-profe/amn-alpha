@@ -27,7 +27,7 @@ const transition = {
         </p>
         <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
           {description ||
-            `Vive la mejor experiencia en tus dispositivos a la hora de conectarlos y comunicarlos con otro. Intercambia información o establece una conexión directa en la era digital`}
+            `Vive la mejor experiencia en tus dispositivos a la hora de conectarlos. Intercambia información o establece una conexión directa en la era digital`}
         </p>
         
         <svg

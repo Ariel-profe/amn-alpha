@@ -32,10 +32,10 @@ export default function LanguageChanger() {
 
   return (
   <div className='flex items-center w-full gap-x-1'>
-    <button onClick={() => handleClick('es')} className='w-10 h-10'>
+    <button onClick={() => handleClick('es')} className='w-8 h-8'>
       <img src="/images/spain.svg" alt="bandera-espania" className='w-full lg:hover:opacity-70 transition' />
     </button>
-    <button onClick={() => handleClick('en')} className='w-10 h-10'>
+    <button onClick={() => handleClick('en')} className='w-8 h-8'>
       <img src="/images/usa.svg" alt="bandera-usa" className='w-full lg:hover:opacity-70 transition' />
     </button>
   </div>

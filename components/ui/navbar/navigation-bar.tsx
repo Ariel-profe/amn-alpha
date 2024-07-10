@@ -1,10 +1,10 @@
 'use client';
 
 import { forwardRef } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils"
-
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -16,7 +16,7 @@ import {
 
 import Logo from "./logo"
 import { about, services } from "@/utils/navigation-links"
-import Link from "next/link";
+import { DrawLine } from "./draw-line";
 
 export function NavigationMenuBar() {
 
@@ -26,7 +26,10 @@ export function NavigationMenuBar() {
       <NavigationMenu>
         <NavigationMenuList className="hidden lg:flex md:space-x-4">
           <NavigationMenuItem>
-            <NavigationMenuTrigger className={`${pathname === "/" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>Inicio</NavigationMenuTrigger>
+            <NavigationMenuTrigger className={`relative ${pathname === "/" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
+              Inicio
+              {pathname === "/" ? <DrawLine /> : null}
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
@@ -58,7 +61,10 @@ export function NavigationMenuBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className={`${pathname === "/nosotros" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`} >Nosotros</NavigationMenuTrigger>
+            <NavigationMenuTrigger className={`relative ${pathname === "/nosotros" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
+              Nosotros
+              {pathname === "/nosotros" ? <DrawLine /> : null}
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {about.map((component) => (
@@ -74,7 +80,10 @@ export function NavigationMenuBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger className={`${pathname === "/servicios" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`} >Servicios</NavigationMenuTrigger>
+            <NavigationMenuTrigger className={`relative ${pathname === "/servicios" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
+              Servicios
+              {pathname === "/servicios" ? <DrawLine /> : null}
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {services.map((component) => (
@@ -90,11 +99,23 @@ export function NavigationMenuBar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-          <Link className={`${pathname === "/proyectos" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium`} href="/proyectos">Proyectos</Link>
+          <Link 
+            className={
+              `${pathname === "/proyectos" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} 
+              font-medium relative`
+            } href="/proyectos">
+
+              Proyectos
+              {pathname === "/proyectos" ? <DrawLine /> : null}
+             
+            </Link>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-              <Link className={`${pathname === "/contacto" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium`} href="/contacto">Contacto</Link>
+            <Link className={`${pathname === "/contacto" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium relative`} href="/contacto">
+              Contacto
+              {pathname === "/contacto" ? <DrawLine /> : null}
+            </Link>
           </NavigationMenuItem>
         
         </NavigationMenuList>

@@ -35,7 +35,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir(locale)} className='dark'>
       <link rel="icon" href="/iso1.svg" sizes="any" />
-      <body className={`${font.className} bg-slate-50 dark:bg-gray-900 overflow-y-scroll overflow-x-hidden`}>
+      <body className={`${font.className} bg-slate-50 dark:bg-gray-900 overflow-y-scroll overflow-x-hidden max-w-[1990px] mx-auto`}>
         <TranslationsProvider 
           locale={locale} 
           namespaces={i18nNamespaces} 

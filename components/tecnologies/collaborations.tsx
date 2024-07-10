@@ -20,10 +20,10 @@ const LeftCurve = () => {
 
 export const Collaborations = () => {
   return (
-      <div className="flex flex-col items-center justify-center xl:flex-row my-10 lg:py-20 px-3 lg:px-10">
+      <div className="flex flex-col items-center justify-center xl:flex-row my-10 lg:py-20">
         <div className="w-full lg:w-1/2">
-          <h2 className="text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight mb-4 md:mb-8">
-            Integraciones profesionales
+          <h2 className="text-3xl md:pb-8 md:text-6xl text-start bg-clip-text text-transparent bg-gradient-to-b from-rose-500 to-amn-light bg-opacity-50">
+            Profesionalismo sin limites
           </h2>
 
           <ul className="max-w-[32rem] mb-10 lg:mb-14">
@@ -40,11 +40,7 @@ export const Collaborations = () => {
         </div>
 
         <div className="lg:ml-auto mt-4 w-full lg:w-1/2">
-          <p className="mb-10 text-slate-400 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
-            {collabText}
-          </p>
-
-          <div className="relative left-1/2 flex w-[22rem] aspect-square border border-slate-600 rounded-full -translate-x-1/2 scale:75 md:scale-100">
+         <div className="relative left-1/2 flex w-[22rem] aspect-square border border-slate-600 rounded-full -translate-x-1/2 scale:75 md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-slate-600 rounded-full">
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-amn-darker rounded-full">

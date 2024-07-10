@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Title } from "@/components/ui/title";
 import initTranslations from "@/app/i18n";
+import { OrbitingCirclesDemo } from "@/components/tecnologies/orbiting-circles";
 
 const Features = async({locale }:{locale :string }) => {
 
@@ -17,13 +18,11 @@ const Features = async({locale }:{locale :string }) => {
           {t("features_subheader")}
           </div>
           <Button size={"lg"}>
-            <Link href={"/servicios"}>{t("common:button_services")}</Link>
+            <Link href={"/tecnologias"}>{t("common:button_technologies")}</Link>
           </Button>
         </div>
 
-        <div className="mt-10 md:mt-0">
-          <img src="/amn-iso.png" alt="amn-logo" className="md:w-[500px] animate-spin-slow" />
-        </div>      
+        <OrbitingCirclesDemo />     
       </div>
 
   );

@@ -1,95 +1,123 @@
 "use client";
 
-import React from "react";
-
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
 
-const BoxesCore = ({ className, ...rest }: { className?: string }) => {
-    const rows = new Array(150).fill(1);
-    const cols = new Array(100).fill(1);
-    let colors = [
-      "--sky-300",
-      "--pink-300",
-      "--green-300",
-      "--yellow-300",
-      "--red-300",
-      "--purple-300",
-      "--blue-300",
-      "--indigo-300",
-      "--violet-300",
-    ];
+export const HeroHighlight = ({
+  children,
+  className,
+  containerClassName,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  containerClassName?: string;
+}) => {
+  let mouseX = useMotionValue(0);
+  let mouseY = useMotionValue(0);
 
-    const getRandomColor = () => {
-      return colors[Math.floor(Math.random() * colors.length)];
-    };
-   
-    return (
-      <div
-        style={{
-          transform: `translate(-40%,-60%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
-        }}
-        className={cn(
-          "absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 ",
-          className
-        )}
-        {...rest}
-      >
-        {rows.map((_, i) => (
-          <motion.div
-            key={`row` + i}
-            className="w-16 h-8  border-l  border-slate-700 relative"
-          >
-            {cols.map((_, j) => (
-              <motion.div
-                whileHover={{
-                  backgroundColor: `var(${getRandomColor()})`,
-                  transition: { duration: 0 },
-                }}
-                animate={{
-                  transition: { duration: 2 },
-                }}
-                key={`col` + j}
-                className="w-16 h-8  border-r border-t border-slate-700 relative"
-              >
-                {j % 2 === 0 && i % 2 === 0 ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-700 stroke-[1px] pointer-events-none"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 6v12m6-6H6"
-                    />
-                  </svg>
-                ) : null}
-              </motion.div>
-            ))}
-          </motion.div>
-        ))}
-      </div>
-    );
-  };
-   
-const Boxes = React.memo(BoxesCore);
- 
-export function HeroSection({title, subtitle}:{title: string; subtitle: string}) {
+  function handleMouseMove({
+    currentTarget,
+    clientX,
+    clientY,
+  }: React.MouseEvent<HTMLDivElement>) {
+    if (!currentTarget) return;
+    let { left, top } = currentTarget.getBoundingClientRect();
+
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
   return (
-    <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-2xl mt-10">
-      <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
- 
-      <Boxes />
-      <h1 className={cn("lg:text-6xl text-xl text-slate-200 relative z-20 mb-5")}>
-        {title}
-      </h1>
-      <p className="text-center mt-2 text-slate-400 relative z-20 lg:text-lg max-w-[600px]">
-        {subtitle}
-      </p>
+    <div
+      className={cn(
+        "relative h-[20rem] lg:h-[40rem] flex items-center dark:bg-slate-900 justify-center w-full group",
+        containerClassName
+      )}
+      onMouseMove={handleMouseMove}
+    >
+      <div className="absolute inset-0 bg-dot-thick-neutral-200 dark:bg-dot-thick-neutral-800 pointer-events-none" />
+      <motion.div
+        className="pointer-events-none bg-dot-thick-amn-semidark dark:bg-dot-thick-amn-semidark absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
+        style={{
+          WebkitMaskImage: useMotionTemplate`
+            radial-gradient(
+              200px circle at ${mouseX}px ${mouseY}px,
+              black 0%,
+              transparent 100%
+            )
+          `,
+          maskImage: useMotionTemplate`
+            radial-gradient(
+              200px circle at ${mouseX}px ${mouseY}px,
+              black 0%,
+              transparent 100%
+            )
+          `,
+        }}
+      />
+
+      <div className={cn("relative z-20", className)}>{children}</div>
     </div>
+  );
+};
+
+export const Highlight = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <motion.span
+      initial={{
+        backgroundSize: "0% 100%",
+      }}
+      animate={{
+        backgroundSize: "100% 100%",
+      }}
+      transition={{
+        duration: 2,
+        ease: "linear",
+        delay: 0.5,
+      }}
+      style={{
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "left center",
+        display: "inline",
+      }}
+      className={cn(
+        `relative inline-block pb-1 px-1 rounded-lg bg-gradient-to-r from-amn-dark/90 to-amn-light dark:from-amn-dark dark:to-amn-light`,
+        className
+      )}
+    >
+      {children}
+    </motion.span>
+  );
+};
+
+export function HeroSection({title, subtitle}:{title:string; subtitle:string}) {
+  return (
+    <HeroHighlight>
+      <motion.h1
+        initial={{
+          opacity: 0,
+          y: 20,
+        }}
+        animate={{
+          opacity: 1,
+          y: [20, -5, 0],
+        }}
+        transition={{
+          duration: 0.5,
+          ease: [0.4, 0.0, 0.2, 1],
+        }}
+        className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-amn-dark dark:text-white max-w-7xl leading-relaxed lg:leading-snug text-center mx-auto "
+      >
+        {title} {" "}
+        <Highlight className="text-white">
+          {subtitle}.
+        </Highlight>
+      </motion.h1>
+    </HeroHighlight>
   );
 }

@@ -12,7 +12,7 @@ export const ProjectCard = ({project, setProjectSelected, setOpenModal}:{project
   };
 
   return (
-    <div className="block relative group transition hover:scale-105 hover:-rotate-1 max-w-sm cursor-pointer border rounded-2xl" onClick={handleSelect}>
+    <div className="block relative group transition hover:scale-105 hover:-rotate-1 max-w-sm cursor-pointer border rounded-2xl h-fit" onClick={handleSelect}>
       <div className="block">
         <div className="aspect-w-2 aspect-h-1 rounded-t-2xl overflow-hidden bg-gray-100 max-h-[250px]">
           <img src={img} loading="lazy" className="object-center object-cover w-full h-full" />

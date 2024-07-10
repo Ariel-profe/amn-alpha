@@ -49,7 +49,7 @@ const ActionButtons = () => {
             </Sheet>
         </div>
 
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex lg:items-center gap-x-2">
             <ThemeToggle />
             <LanguageChanger />
         </div>

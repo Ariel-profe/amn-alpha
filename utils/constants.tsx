@@ -104,21 +104,21 @@ export const amn_services = [
   "Seguridad"
 ];
 
-export const collabText = "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
+export const collabText = "Con automatización inteligente y seguridad de primer nivel, es la solución perfecta para equipos que buscan trabajar de manera más inteligente.";
 
 export const collabContent:ICollabContent[] = [
   {
     id: '0',
-    title: "Seamless Integration",
+    title: "Integracion perfecta",
     text: collabText,
   },
   {
     id: '1',
-    title: "Smart Automation",
+    title: "Automatizacion inteligente",
   },
   {
     id: '2',
-    title: "Top-notch Security",
+    title: "Seguridad de primer nivel",
   },
 ];
 
