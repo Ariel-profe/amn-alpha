@@ -113,7 +113,7 @@ export function HeroSection({title, subtitle}:{title:string; subtitle:string}) {
         }}
         className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-amn-dark dark:text-white max-w-7xl leading-relaxed lg:leading-snug text-center mx-auto "
       >
-        {title} {" "}
+        {title} {" "} <br />
         <Highlight className="text-white">
           {subtitle}.
         </Highlight>

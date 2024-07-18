@@ -9,7 +9,7 @@ const Services = async({locale }:{locale :string }) => {
   const { t } = await initTranslations(locale, ['homepage']);  
 
   return (
-    <div className="flex-col items-center justify-center" id="servicios">
+    <div className="flex flex-col items-center justify-center " id="servicios">
       <Subtitle subtitle={t("features_header")} />
       <CardHoverEffectDemo cardsArray={homepageServices} />
     </div>

@@ -8,6 +8,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { i18nConfig } from '@/i18nConfig';
 import TranslationsProvider from '@/components/translations-provider';
 import initTranslations from '../i18n';
+import { FloatingNavDemo } from '@/components/ui/navbar/floating-navbar';
 
 const font = Outfit({ subsets: ['latin'] })
 
@@ -35,7 +36,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir(locale)} className='dark'>
       <link rel="icon" href="/iso1.svg" sizes="any" />
-      <body className={`${font.className} bg-slate-50 dark:bg-gray-900 overflow-y-scroll overflow-x-hidden max-w-[1990px] mx-auto`}>
+      <body className={`${font.className} bg-slate-50 dark:bg-gray-900 overflow-y-scroll overflow-x-hidden max-w-[1990px] mx-auto px-3 lg:px-6 relative`}>
         <TranslationsProvider 
           locale={locale} 
           namespaces={i18nNamespaces} 
@@ -47,9 +48,10 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className='relative flex flex-col'>
+            <div className='flex flex-col'>
               <Navbar />
-              <main className='flex-grow shadow-md pb-20'>
+              <FloatingNavDemo />
+              <main className='flex-grow shadow-md pb-10'>
                 {children}
               </main>
               <Footer />

@@ -98,11 +98,12 @@ export function NavigationMenuBar() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+          
           <NavigationMenuItem>
           <Link 
             className={
               `${pathname === "/proyectos" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} 
-              font-medium relative`
+              font-medium relative p-2.5 rounded-md hover:text-slate-700 dark:hover:text-slate-300`
             } href="/proyectos">
 
               Proyectos
@@ -112,7 +113,7 @@ export function NavigationMenuBar() {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link className={`${pathname === "/contacto" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium relative`} href="/contacto">
+            <Link className={`${pathname === "/contacto" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium relative p-2.5 rounded-md hover:text-slate-700 dark:hover:text-slate-300`} href="/contacto">
               Contacto
               {pathname === "/contacto" ? <DrawLine /> : null}
             </Link>

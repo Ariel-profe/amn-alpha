@@ -1,11 +1,11 @@
-import { Conectivity } from "@/components/services/conectivity";
-import ServicesBento from "@/components/services/servicesBento";
 import { HeroSection } from "@/components/ui/hero-section";
+import ServicesBento from "@/components/services/servicesBento";
+import { Conectivity } from "@/components/services/conectivity";
 
 const ServicesPage = () => {
   return (
-    <div className="relative px-3 lg:px-10">
-       <HeroSection title="Somos expertos en tecnologia. Nuestros servicios serán integrados en base a" subtitle="los objetivos y necesidades que tengas" />
+    <div>
+      <HeroSection title="Somos expertos en tecnología. Nuestros servicios serán integrados en base a" subtitle="los objetivos y necesidades que tengas" />
       <ServicesBento />
       <Conectivity />
     </div>

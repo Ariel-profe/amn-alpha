@@ -4,6 +4,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 
 import { cn } from "@/lib/utils";
+import Faqs from "./faqs";
  
 export function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -11,10 +12,10 @@ export function ContactForm() {
     console.log("Form submitted");
   };
   return (
-    <div className="flex items-center justify-between w-full h-full" id="formulario">
-      <div className="my-20 w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-slate-800/40 ">
+    <div className="flex flex-col lg:flex-row justify-between w-full h-full" id="formulario">
+      <div className="w-full mx-auto p-4 md:p-8 ">
         <h2 className="font-bold text-2xl text-slate-800 dark:text-neutral-200">
-          Bienvenidos a AMN
+          Formulario de contacto
         </h2>
         <p className="text-slate-600 text-lg mt-2 dark:text-neutral-300">
           Envianos un email con cualquier duda que tengas y las responderemos al instante.
@@ -60,15 +61,14 @@ export function ContactForm() {
               Enviar &rarr;
               <BottomGradient />
             </button>
-      
-            <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
           </form>
 
-          <div className="flex items-center justify-end">
+          {/* <div className="flex items-center justify-end">
             <img src="/images/banner.png" alt="banner-amn" className="rounded-2xl" />
-          </div>
+          </div> */}
         </div>
       </div>
+      <Faqs />
     </div>
   );
 }

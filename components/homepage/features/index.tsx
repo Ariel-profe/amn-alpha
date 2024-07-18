@@ -10,9 +10,9 @@ const Features = async({locale }:{locale :string }) => {
   const { t } = await initTranslations(locale, ['homepage', 'common']); 
 
     return ( 
-      <div className="container md:flex-row flex-col items-center flex justify-between pb-10">
-        <div className="justify-between md:w-2/3">
-          <Title title={t("features_header")} className="max-w-[600px]" />
+      <div className="md:flex-row flex-col items-center flex justify-between pb-10">
+        <div className="justify-between ">
+          <Title title={t("features_header")} className="max-w-[800px]" />
 
           <div className="text-2xl mb-8 dark:text-slate-300">
           {t("features_subheader")}
@@ -21,7 +21,7 @@ const Features = async({locale }:{locale :string }) => {
             <Link href={"/tecnologias"}>{t("common:button_technologies")}</Link>
           </Button>
         </div>
-
+        
         <OrbitingCirclesDemo />     
       </div>
 

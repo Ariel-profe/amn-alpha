@@ -212,8 +212,8 @@ export function TypewriterEffectSmoothDemo() {
       },
     ];
     return (
-      <div className="flex flex-col items-center justify-center h-[20rem]  ">
-        <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+      <div className="hidden md:flex flex-col items-center justify-center h-[20rem]  ">
+        <p className="text-neutral-600 dark:text-neutral-200 text-base sm:text-lg">
           {pathname.includes("/en") ? "The road to excellence begins here" : "El camino a la excelencia comienza aquí"}
         </p>
         <TypewriterEffectSmooth words={words} />

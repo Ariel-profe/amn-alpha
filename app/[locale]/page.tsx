@@ -8,13 +8,15 @@ import Services from "@/components/homepage/services";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default async function Home({ params: locale }:{ params: {locale :string} }) {    
-  return <TracingBeam className="px-3 lg:px-10">
-    <Hero locale={locale.locale} />
-    <Features locale={locale.locale} />
-    <Companies />
-    <Services locale={locale.locale} />
-    <WeCreate locale={locale.locale} />
-    <Plans />
-    <WeBuild locale={locale.locale} />
+  return <TracingBeam>
+    <div className="max-w-[1440px] mx-auto relative">
+      <Hero locale={locale.locale} />
+      <Features locale={locale.locale} />
+      <Services locale={locale.locale} />
+      <WeCreate locale={locale.locale} />
+      <Plans />
+      <Companies />
+      <WeBuild locale={locale.locale} />
+    </div>
     </TracingBeam>;
 }

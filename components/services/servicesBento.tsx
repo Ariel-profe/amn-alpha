@@ -1,3 +1,4 @@
+import { Conectivity } from "./conectivity";
 
 const ServicesBento = () => {
   return (
@@ -41,7 +42,7 @@ const ServicesBento = () => {
               <div className="relative h-[20rem] bg-slate-800 rounded-xl overflow-hidden md:h-[27rem]">
                 <img
                   src="/services/developmentTools.svg"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   width={520}
                   height={400}
                   alt="development-tools"
@@ -50,7 +51,7 @@ const ServicesBento = () => {
               </div>
             </div>
 
-            {/* Diseno Grafico */}
+            {/* Servicio IT */}
             <div className="p-4 bg-slate-700 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="text-white lg:text-3xl mb-4">SERVICIO TI</h4>
@@ -65,11 +66,13 @@ const ServicesBento = () => {
                   className="w-full h-full object-cover grayscale"
                   width={520}
                   height={400}
-                  alt="development-tools"
+                  alt="it-service"
                 />
 
               </div>
             </div>
+
+            {/* Diseno grafico */}
 
             <div className="relative min-h-[39rem] border border-slate-100/10 rounded-3xl overflow-hidden">
               <div className="absolute inset-0">
@@ -83,7 +86,7 @@ const ServicesBento = () => {
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-slate-900/30 to-amn-darker lg:p-15">
-                <h4 className="lg:text-2xl mb-4 text-white">DISENO GRAFICO</h4>
+                <h4 className="lg:text-2xl mb-4 text-white">DISEÑO GRÁFICO</h4>
                 <p className="md:text-xl mb-[3rem] text-slate-400">
                   Producir una imagen visual única y reconocible que represente a una empresa o marca. Creación de diseños visuales atractivos y fáciles de usar para páginas, sitios web, aplicaciones. Materiales impresos como folletos, flyers, banners, packaging, hojas membretadas y carteles.
                 </p>

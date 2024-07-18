@@ -7,16 +7,11 @@ import {
 
 const Faqs = () => {
     return ( 
-        <div className="mt-10 w-full" id="faq">
-            <div className="flex flex-col md:flex-row items-center gap-x-4">
-                <div className="py-3 font-semibold text-3xl md:text-6xl text-gradient bg-gradient-to-r from-rose-500 to-amn-light bg-clip-text text-transparent">
-                ¿Alguna pregunta?
-                </div>
-                <div className="py-3 font-normal text-2xl md:text-5xl text-amn-darker dark:text-slate-300">
-                Te las respondemos
-                </div>
+        <div className="w-full my-10" id="faq">
+            <h2 className="font-bold text-2xl text-slate-800 dark:text-neutral-200">
+            Preguntas frecuentes
+            </h2>
 
-            </div>
             <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                     <AccordionTrigger>En dónde nos encontramos?</AccordionTrigger>
@@ -50,7 +45,7 @@ const Faqs = () => {
                     </AccordionContent>
                 </AccordionItem>
             </Accordion>
-    </div> 
+        </div> 
     );
 }
  

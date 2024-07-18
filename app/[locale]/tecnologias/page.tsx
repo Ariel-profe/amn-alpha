@@ -6,8 +6,8 @@ import { HeroSection } from '@/components/ui/hero-section';
 
 const TecnologiesPage = () => {
   return (
-    <div className="relative px-3 lg:px-10">
-      <HeroSection title="Las tecnologias que aplicamos son las ultimas del mercado y poseen" subtitle="excelente rendimiento a la hora de utilizarlas" />
+    <div>
+      <HeroSection title="Las tecnologías que aplicamos son las últimas del mercado y poseen" subtitle="excelente rendimiento a la hora de utilizarlas" />
       <BentoDemo />
       <Collaborations />
       <GraphicDesign />

@@ -9,7 +9,7 @@ interface Props {
 
 export const Categories:FC<Props> = ({filterItems, categories, isSelected}) => {
   return (
-    <div className='relative mb-20 flex flex-col gap-y-3 w-full lg:w-1/5'>
+    <div className='relative mb-5 flex flex-col gap-y-3 w-full lg:w-1/5'>
         {categories.map( (category: string, index:number) =>(
             <motion.button
                 key={index}

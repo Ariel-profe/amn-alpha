@@ -26,7 +26,7 @@ export const Companies = () => {
   }, []);
 
   return (
-    <div id="marcas" className="lg:py-20 px-3 lg:px-10">
+    <div id="marcas" className="lg:py-20 flex flex-col items-center justify-center">
       <Subtitle subtitle={t("companies_header")} />
 
       <div className="grid grid-cols-2 md:grid-cols-3 mx-auto w-full p-4 md:flex">

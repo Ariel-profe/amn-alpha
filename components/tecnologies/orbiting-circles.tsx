@@ -59,9 +59,6 @@ export default function OrbitingCircles({
 export function OrbitingCirclesDemo() {
   return (
     <div className="relative flex h-[500px] w-full max-w-[32rem] items-center justify-center overflow-hidden">
-      {/* <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-        Circles
-      </span> */}
       <img src="/iso1.svg" className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10 w-20" />
 
       {/* Inner Circles */}
@@ -85,7 +82,7 @@ export function OrbitingCirclesDemo() {
       {/* Outer Circles (reverse) */}
       <OrbitingCircles
         className="h-[50px] w-[50px] border-none bg-transparent"
-        radius={190}
+        radius={170}
         duration={20}
         reverse
       >
@@ -93,7 +90,7 @@ export function OrbitingCirclesDemo() {
       </OrbitingCircles>
       <OrbitingCircles
         className="h-[50px] w-[50px] border-none bg-transparent"
-        radius={190}
+        radius={170}
         duration={20}
         delay={20}
         reverse
