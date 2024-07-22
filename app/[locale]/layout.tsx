@@ -9,6 +9,7 @@ import { i18nConfig } from '@/i18nConfig';
 import TranslationsProvider from '@/components/translations-provider';
 import initTranslations from '../i18n';
 import { FloatingNavDemo } from '@/components/ui/navbar/floating-navbar';
+import { TracingBeam } from '@/components/ui/tracing-beam';
 
 const font = Outfit({ subsets: ['latin'] })
 
@@ -36,7 +37,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} dir={dir(locale)} className='dark'>
       <link rel="icon" href="/iso1.svg" sizes="any" />
-      <body className={`${font.className} bg-slate-50 dark:bg-gray-900 overflow-y-scroll overflow-x-hidden max-w-[1990px] mx-auto px-3 lg:px-6 relative`}>
+      <body className={`${font.className} bg-slate-50 dark:bg-gray-900 overflow-y-scroll overflow-x-hidden max-w-[1990px] mx-auto px-3 lg:px-6`}>
         <TranslationsProvider 
           locale={locale} 
           namespaces={i18nNamespaces} 

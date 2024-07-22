@@ -9,7 +9,7 @@ import Link from "next/link";
     const year = new Date().getFullYear();
   
     return (
-      <div className="relative w-full h-full text-slate-800 dark:text-slate-300 shadow-lg py-10 px-3 ">
+      <div className="relative w-full h-full text-slate-800 dark:text-slate-300 shadow-lg mt-14 pb-10 px-3 ">
           <div className="w-full flex flex-col items-center justify-center m-auto">
               <div className="w-full h-full flex flex-row items-start justify-around flex-wrap px-3">
                   

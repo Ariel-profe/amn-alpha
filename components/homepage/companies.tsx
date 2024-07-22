@@ -26,35 +26,35 @@ export const Companies = () => {
   }, []);
 
   return (
-    <div id="marcas" className="lg:py-20 flex flex-col items-center justify-center">
+    <div id="marcas" className="lg:py-20">
       <Subtitle subtitle={t("companies_header")} />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 mx-auto w-full p-4 md:flex">
         <AnimatePresence custom={currentImageIndex}>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           {carousel_images.map((image, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity : index === currentImageIndex ? 1 : 0.8,
-                scale : index === currentImageIndex ? 1.2 : 1,
-                transition: { duration: 0.5 },
-              }}
-              className="flex items-center justify-center h-40 w-full"
-              exit={{ opacity: 0 }}
-              custom={index}
-              transition={{ opacity: { duration: 0.5 }}}>
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity : index === currentImageIndex ? 1 : 0.8,
+              scale : index === currentImageIndex ? 1.2 : 1,
+              transition: { duration: 0.5 },
+            }}
+            className="flex items-center justify-center h-40 w-full"
+            exit={{ opacity: 0 }}
+            custom={index}
+            transition={{ opacity: { duration: 0.5 }}}>
                 <Image
                   src={image.url}
                   alt={image.alt}
                   width={200}
                   height={200}
                   className="object-contain h-20 w-20 items-center justify-center flex mx-auto"
-                />
+                  />
               </motion.div>
           ))}
+          </div>
         </AnimatePresence>
-      </div>
     </div>
   );
 };

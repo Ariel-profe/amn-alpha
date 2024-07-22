@@ -4,11 +4,11 @@ import { HeroSection } from "@/components/ui/hero-section";
 
 const ContactPage = () => {
   return (
-    <div>
+    <section className="max-w-[1640px] mx-auto relative">
       <HeroSection title="Ponte en contacto con nuestro equipo, queremos" subtitle="conocerte y que nos conozcas" />
       <ContactForm />
-      {/* <Faqs /> */}
-    </div>
+      <Faqs />
+    </section>
   )
 }
 

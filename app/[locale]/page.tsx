@@ -9,7 +9,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default async function Home({ params: locale }:{ params: {locale :string} }) {    
   return <TracingBeam>
-    <div className="max-w-[1440px] mx-auto relative">
+    <div className="max-w-[1640px] mx-auto">
       <Hero locale={locale.locale} />
       <Features locale={locale.locale} />
       <Services locale={locale.locale} />

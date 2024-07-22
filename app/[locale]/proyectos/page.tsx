@@ -66,9 +66,9 @@ const ProjectsPage = () => {
   };  
 
   return (
-    <div>
+    <section className="max-w-[1640px] mx-auto relative">
       <HeroSection title="Cada uno de nuestros trabajos nace de una necesidad y se orienta al" subtitle="cumplimiento de objetivos" />
-      <div className="flex flex-col lg:flex-row items-start gap-5 w-full pt-10">
+      <div className="flex flex-col lg:flex-row items-start gap-5 w-full">
         <Categories categories={categories} filterItems={filterItems} isSelected={isSelected} />
         <ProjectList projects={currentProjects} setProjectSelected={setProjectSelected} setOpenModal={setOpenModal} />
       </div>
@@ -137,7 +137,7 @@ const ProjectsPage = () => {
      </motion.div>
       )}
       </AnimatePresence>
-    </div>
+    </section>
   )
 }
 

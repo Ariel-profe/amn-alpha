@@ -9,20 +9,20 @@ const GraphicDesign = () => {
     <div className="lg:mt-32 flex flex-col xl:flex-row items-center mx-auto relative w-full">
       <div className="items-center lg:flex justify-center md:space-x-4">
         <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="px-10 md:px-0"
-          >
-           <ThreeDCardExample />
-            </motion.div>
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className=" md:px-0"
+        >
+          <ThreeDCardExample />
+        </motion.div>
 
-            <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="px-10 md:px-0"
-          >
-           <EvervaultCardSnippet />
-            </motion.div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className=" md:px-0"
+        >
+          <EvervaultCardSnippet />
+        </motion.div>
       </div> 
 
       <div className="flex flex-col w-full lg:pl-20">

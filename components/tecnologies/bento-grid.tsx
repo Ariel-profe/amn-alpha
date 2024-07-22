@@ -123,7 +123,7 @@ const features = [
 
 export function BentoDemo() {
   return (
-    <BentoGrid className="">
+    <BentoGrid className="overflow-hidden">
       {features.map((feature, idx) => (
         <BentoCard key={idx} {...feature} />
       ))}

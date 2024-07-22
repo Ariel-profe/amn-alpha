@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 
 import { cn } from "@/lib/utils";
 import Faqs from "./faqs";
+import { FoldableMap } from "./foldable-map";
+import { Subtitle } from "../ui/subtitle";
  
 export function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -13,10 +15,8 @@ export function ContactForm() {
   };
   return (
     <div className="flex flex-col lg:flex-row justify-between w-full h-full" id="formulario">
-      <div className="w-full mx-auto p-4 md:p-8 ">
-        <h2 className="font-bold text-2xl text-slate-800 dark:text-neutral-200">
-          Formulario de contacto
-        </h2>
+      <div className="w-full mx-auto">
+        <Subtitle subtitle="Formulario de contacto" className="text-start" />
         <p className="text-slate-600 text-lg mt-2 dark:text-neutral-300">
           Envianos un email con cualquier duda que tengas y las responderemos al instante.
         </p>
@@ -63,12 +63,9 @@ export function ContactForm() {
             </button>
           </form>
 
-          {/* <div className="flex items-center justify-end">
-            <img src="/images/banner.png" alt="banner-amn" className="rounded-2xl" />
-          </div> */}
+          <FoldableMap />
         </div>
       </div>
-      <Faqs />
     </div>
   );
 }

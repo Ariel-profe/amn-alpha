@@ -51,7 +51,7 @@ export const TracingBeam = ({
       ref={ref}
       className={cn("relative w-full max-w-[1700px] mx-auto h-full", className)}
     >
-      <div className="absolute -left-4 md:-left-20 top-3 hidden lg:block">
+      <div className="absolute -left-4 md:-left-20 top-3 hidden lg:flex lg:flex-col">
         <motion.div
           transition={{
             duration: 0.2,
@@ -68,7 +68,7 @@ export const TracingBeam = ({
           <motion.div
             transition={{
               duration: 0.2,
-              delay: 0.5,
+              delay: 0.2,
             }}
             animate={{
               backgroundColor:

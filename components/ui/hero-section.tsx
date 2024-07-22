@@ -29,14 +29,14 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "relative h-[20rem] lg:h-[40rem] flex items-center dark:bg-slate-900 justify-center w-full group",
+        "relative h-[20rem] lg:h-[80vh] flex items-center justify-center w-full group mb-10 lg:mb-20",
         containerClassName
       )}
       onMouseMove={handleMouseMove}
     >
-      <div className="absolute inset-0 bg-dot-thick-neutral-200 dark:bg-dot-thick-neutral-800 pointer-events-none" />
+      <div className="absolute inset-0 bg-dot-thick-neutral-100 dark:bg-dot-thick-[#131c33] pointer-events-none" />
       <motion.div
-        className="pointer-events-none bg-dot-thick-amn-semidark dark:bg-dot-thick-amn-semidark absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
+        className="pointer-events-none bg-dot-thick-amn-dark dark:bg-dot-thick-amn-dark absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
           WebkitMaskImage: useMotionTemplate`
             radial-gradient(
@@ -86,7 +86,7 @@ export const Highlight = ({
         display: "inline",
       }}
       className={cn(
-        `relative inline-block pb-1 px-1 rounded-lg bg-gradient-to-r from-amn-dark/90 to-amn-light dark:from-amn-dark dark:to-amn-light`,
+        `relative inline-block pb-1 px-2 rounded-lg bg-gradient-to-r from-amn-dark/90 to-amn-light dark:from-amn-dark dark:to-amn-light`,
         className
       )}
     >
@@ -115,7 +115,7 @@ export function HeroSection({title, subtitle}:{title:string; subtitle:string}) {
       >
         {title} {" "} <br />
         <Highlight className="text-white">
-          {subtitle}.
+          {subtitle}
         </Highlight>
       </motion.h1>
     </HeroHighlight>

@@ -2,7 +2,6 @@ import { Conectivity } from "./conectivity";
 
 const ServicesBento = () => {
   return (
-        <div className="relative my-6">
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             {/* Marketing */}
             <div className="relative min-h-[39rem] border border-slate-100/10 rounded-3xl overflow-hidden">
@@ -95,7 +94,6 @@ const ServicesBento = () => {
 
           
           </div>
-        </div>
   );
 };
 

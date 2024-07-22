@@ -4,13 +4,12 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+import { Subtitle } from "../ui/subtitle";
 
 const Faqs = () => {
     return ( 
         <div className="w-full my-10" id="faq">
-            <h2 className="font-bold text-2xl text-slate-800 dark:text-neutral-200">
-            Preguntas frecuentes
-            </h2>
+            <Subtitle subtitle="Preguntas frecuentes" className="text-start" />
 
             <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">

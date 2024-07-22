@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/ui/hero-section";
 
 const AboutPage = () => {
   return (
-    <div>
+    <section className="max-w-[1640px] mx-auto relative">
       <HeroSection 
         title="Hemos creado AMN para vos. Queremos acompanarte en tu camino hacia la excelencia y" 
         subtitle="poder impulsarte a vos y a tu empresa" 
@@ -15,7 +15,7 @@ const AboutPage = () => {
       <Company />
       <Goals />
       <GlobeDemo />
-    </div>
+    </section>
   )
 }
 
