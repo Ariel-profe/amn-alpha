@@ -28,21 +28,21 @@ const ActionButtons = () => {
                             <LanguageChanger />
                         </div>
                         <SheetDescription className="flex flex-col space-y-4 items-start w-full text-lg text-amn-darker dark:text-slate-300 mt-10">
-                                <SheetClose asChild> 
+                            <SheetClose asChild> 
                                 <Link href="/"> Inicio </Link>
-                                </SheetClose>
-                                <SheetClose asChild> 
+                            </SheetClose>
+                            <SheetClose asChild> 
                                 <Link href="/nosotros"> Nosotros </Link>
-                                </SheetClose>
-                                <SheetClose asChild> 
+                            </SheetClose>
+                            <SheetClose asChild> 
                                 <Link href="/servicios"> Servicios </Link>
-                                </SheetClose>
-                                <SheetClose asChild> 
+                            </SheetClose>
+                            <SheetClose asChild> 
                                 <Link href="/proyectos"> Proyectos </Link>
-                                </SheetClose>
-                                <SheetClose asChild> 
+                            </SheetClose>
+                            <SheetClose asChild> 
                                 <Link  href="/contacto"> Contacto </Link>
-                                </SheetClose>
+                            </SheetClose>
                         </SheetDescription>
                     </SheetHeader>
                 </SheetContent>

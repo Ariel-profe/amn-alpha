@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import {motion, AnimatePresence, useScroll, useMotionValueEvent} from "framer-motion";
 
 import { cn } from "@/lib/utils";
+import { TransitionLink } from "./transition-link";
 
  
 export const FloatingNav = ({
@@ -59,7 +59,7 @@ export const FloatingNav = ({
         )}
       >
         {navItems.map((navItem: any, idx: number) => (
-          <Link
+          <TransitionLink
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
@@ -67,7 +67,7 @@ export const FloatingNav = ({
             )}
           >
             <span className="block text-sm">{navItem.name}</span>
-          </Link>
+          </TransitionLink>
         ))}
         {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
           <span>Login</span>

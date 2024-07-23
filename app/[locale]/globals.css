@@ -5,6 +5,12 @@
 html{
   scroll-behavior: smooth;
 }
+
+main{
+  transition-property: opacity, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
  
 @layer base {
   :root {
@@ -545,4 +551,9 @@ html{
   width: 80px;
   animation-name: pieceLeft;
   animation-delay: 4.5s;
+}
+
+.page-transition {
+  opacity: 0;
+  filter: blur(12px);
 }

@@ -4,6 +4,7 @@ import { FC, ReactNode, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 import { cn } from "@/lib/utils";
+import { Subtitle } from "./subtitle";
 
 interface TextRevealByWordProps {
   text: string;
@@ -22,7 +23,8 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   const words = text.split(" ");
 
   return (
-    <div ref={targetRef} className={cn("relative mt-10 z-0 h-[200vh]", className)}>
+    <div ref={targetRef} className={cn("relative z-0 h-[110vh] flex flex-col items-center", className)}>
+      <Subtitle subtitle="Un poco de nuestra historia" />
       <div className={"sticky top-0 mx-auto flex h-[50%] lg:h-[40%] items-center bg-transparent py-5"}>
         <p
           ref={targetRef}

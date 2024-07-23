@@ -17,6 +17,7 @@ import {
 import Logo from "./logo"
 import { about, services } from "@/utils/navigation-links"
 import { DrawLine } from "./draw-line";
+import { TransitionLink } from "./transition-link";
 
 export function NavigationMenuBar() {
 
@@ -34,7 +35,7 @@ export function NavigationMenuBar() {
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
-                    <Link
+                    <TransitionLink
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/"
                     >
@@ -45,7 +46,7 @@ export function NavigationMenuBar() {
                       <p className="text-xs leading-tight text-muted-foreground">
                       Impulsamos tu éxito digital
                       </p>
-                    </Link>
+                    </TransitionLink>
                   </NavigationMenuLink>
                 </li>
                 <ListItem href="/#marcas" title="Marcas">
@@ -100,7 +101,7 @@ export function NavigationMenuBar() {
           </NavigationMenuItem>
           
           <NavigationMenuItem>
-          <Link 
+          <TransitionLink 
             className={
               `${pathname === "/proyectos" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} 
               font-medium relative p-2.5 rounded-md hover:text-slate-700 dark:hover:text-slate-300`
@@ -109,14 +110,14 @@ export function NavigationMenuBar() {
               Proyectos
               {pathname === "/proyectos" ? <DrawLine /> : null}
              
-            </Link>
+            </TransitionLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            <Link className={`${pathname === "/contacto" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium relative p-2.5 rounded-md hover:text-slate-700 dark:hover:text-slate-300`} href="/contacto">
+            <TransitionLink className={`${pathname === "/contacto" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium relative p-2.5 rounded-md hover:text-slate-700 dark:hover:text-slate-300`} href="/contacto">
               Contacto
               {pathname === "/contacto" ? <DrawLine /> : null}
-            </Link>
+            </TransitionLink>
           </NavigationMenuItem>
         
         </NavigationMenuList>
@@ -131,7 +132,7 @@ export function NavigationMenuBar() {
     return (
       <li>
         <NavigationMenuLink asChild>
-          <Link
+          <TransitionLink
             href={href}
             ref={ref}
             className={cn(
@@ -144,7 +145,7 @@ export function NavigationMenuBar() {
             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
               {children}
             </p>
-          </Link>
+          </TransitionLink>
         </NavigationMenuLink>
       </li>
     )
