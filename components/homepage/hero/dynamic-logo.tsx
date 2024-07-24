@@ -1,14 +1,23 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 
 export const DynamicLogo = () => {
 
+	const [isFilled, setIsFilled] = useState<boolean>(false);
     const ref = useRef(null);
     const isInView = useInView(ref);
 
+	useEffect(() => {
+		setTimeout(() => setIsFilled(true), 7000)
+	}, []);
+	
+
   return (
+	<AnimatePresence>
+
+	
     <motion.div 
         ref={ref}
         className="flex justify-center mb-10 max-w-[1640px] w-full stroke-amn-dark m-auto"
@@ -17,13 +26,13 @@ export const DynamicLogo = () => {
         transition={{ duration: 4 }}
     >
     <svg version="1.1" id="Capa_2_1_" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 800 317.5" xmlSpace="preserve" fill="#862848">
+	 viewBox="0 0 800 317.5" xmlSpace="preserve" fill="#862848" >
 
 		<g id="Capa_1-2">
 			{/* Letra N */}
 			<motion.path 
-				strokeWidth={2}
-				fill="none"
+				strokeWidth={1}
+				fill={isFilled ? '#862848' : 'none'}
 				initial={{ pathLength: 0 }}
 				animate={isInView && { pathLength: 1 }}
 				transition={{ duration: 6 }} d="M799.9,16V0l-50.5,0.1h0h-34.1l0.2,86.5L631.2,1.1v-1h-66.4c-9.8,0-17.8,8-17.8,17.8v40.4
@@ -31,8 +40,8 @@ export const DynamicLogo = () => {
 				c9.8,0,17.8-8,17.8-17.8V17.9C800,17.3,800,16.6,799.9,16L799.9,16z"/>
 			{/* Letra M */}
 			<motion.path 
-				strokeWidth={2}
-				fill="none"
+				strokeWidth={1}
+				fill={isFilled ? '#862848' : 'none'}
 				initial={{ pathLength: 0 }}
 				animate={isInView && { pathLength: 1 }}
 				transition={{ duration: 6 }} d="M461.3,132.2c0-38,28.4-69.4,65.2-74.1V32.3l0,0V0l-50.5,0.1h0h-35.5l-40.4,40.4L359.7,0.1h-68.4
@@ -93,8 +102,8 @@ export const DynamicLogo = () => {
 				z"/>
 			{/* Letra A */}
 			<motion.path 
-				strokeWidth={2}
-				fill="none"
+				strokeWidth={1}
+				fill={isFilled ? '#862848' : 'none'}
 				initial={{ pathLength: 0 }}
 				animate={isInView && { pathLength: 1 }}
 				transition={{ duration: 6 }} d="M252.7,0l-50.4,0.1h0H17.8C8,0.1,0,8.1,0,17.9v228.6c0,9.8,8,17.8,17.8,17.8h66.4v-42.8h84.1v42.8h52.3l0,0
@@ -157,6 +166,6 @@ export const DynamicLogo = () => {
 		</g>
 		</svg>
     </motion.div>
-    
+    </AnimatePresence>
   )
 }

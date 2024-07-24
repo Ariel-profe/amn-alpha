@@ -7,7 +7,7 @@ import { twMerge } from "tailwind-merge";
 export const DragCards = () => {
   return (
     <section className="cursor-grab relative grid h-[80vh] lg:min-h-screen border rounded-md place-content-center overflow-hidden mt-10">
-      <img src="/amn-logo-2.png" alt="amn logo" className="w-[300px] lg:w-[500px]" />
+      <img src="/amn-logo.svg" alt="amn logo" className="w-[300px] lg:w-[500px]" />
       <Cards />
     </section>
   );
