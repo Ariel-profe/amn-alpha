@@ -16,8 +16,7 @@ import {
 
 import Logo from "./logo"
 import { about, services } from "@/utils/navigation-links"
-import { DrawLine } from "./draw-line";
-import { TransitionLink } from "./transition-link";
+import { Forward, TransitionLink } from "./transition-link";
 
 export function NavigationMenuBar() {
 
@@ -29,7 +28,7 @@ export function NavigationMenuBar() {
           <NavigationMenuItem>
             <NavigationMenuTrigger className={`relative ${pathname === "/" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
               Inicio
-              {pathname === "/" ? <DrawLine /> : null}
+              {pathname === "/" && <Forward />}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -64,7 +63,7 @@ export function NavigationMenuBar() {
           <NavigationMenuItem>
             <NavigationMenuTrigger className={`relative ${pathname === "/nosotros" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
               Nosotros
-              {pathname === "/nosotros" ? <DrawLine /> : null}
+              {pathname === "/nosotros" && <Forward />}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -83,7 +82,7 @@ export function NavigationMenuBar() {
           <NavigationMenuItem>
             <NavigationMenuTrigger className={`relative ${pathname === "/servicios" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
               Servicios
-              {pathname === "/servicios" ? <DrawLine /> : null}
+              {pathname === "/servicios" && <Forward />}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -106,17 +105,13 @@ export function NavigationMenuBar() {
               `${pathname === "/proyectos" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} 
               font-medium relative p-2.5 rounded-md hover:text-slate-700 dark:hover:text-slate-300`
             } href="/proyectos">
-
               Proyectos
-              {pathname === "/proyectos" ? <DrawLine /> : null}
-             
             </TransitionLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem>
             <TransitionLink className={`${pathname === "/contacto" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'} font-medium relative p-2.5 rounded-md hover:text-slate-700 dark:hover:text-slate-300`} href="/contacto">
               Contacto
-              {pathname === "/contacto" ? <DrawLine /> : null}
             </TransitionLink>
           </NavigationMenuItem>
         
