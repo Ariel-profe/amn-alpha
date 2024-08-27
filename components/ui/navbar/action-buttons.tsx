@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/sheet"
 
 import { ThemeToggle } from "../theme-toggle";
-import LanguageChanger from "@/components/language-changer";
+// import LanguageChanger from "@/components/language-changer";
 
 const ActionButtons = () => {
     return ( 
@@ -25,7 +25,7 @@ const ActionButtons = () => {
                     <SheetHeader>
                         <div className="flex items-center gap-x-1 mb-10">
                             <ThemeToggle />
-                            <LanguageChanger />
+                            {/* <LanguageChanger /> */}
                         </div>
                         <SheetDescription className="flex flex-col space-y-4 items-start w-full text-lg text-amn-darker dark:text-slate-300 mt-10">
                             <SheetClose asChild> 
@@ -51,7 +51,7 @@ const ActionButtons = () => {
 
         <div className="hidden lg:flex lg:items-center gap-x-2">
             <ThemeToggle />
-            <LanguageChanger />
+            {/* <LanguageChanger /> */}
         </div>
     </div> 
     );

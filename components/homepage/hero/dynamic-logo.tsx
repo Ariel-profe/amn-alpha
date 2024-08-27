@@ -11,7 +11,7 @@ export const DynamicLogo = () => {
 	useEffect(() => {
 	  setTimeout(() => {
 		setPathColor("#862848");
-	  }, 6000);
+	  }, 3000);
 	}, [pathColor])
 	
 
@@ -23,7 +23,7 @@ export const DynamicLogo = () => {
         className={`flex justify-center mb-10 max-w-[1240px] w-full stroke-[${pathColor}] m-auto`}
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 4 }}
+        transition={{ duration: 2 }}
     >
     <svg version="1.1" id="Capa_2_1_" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 800 317.5" xmlSpace="preserve">
@@ -33,7 +33,7 @@ export const DynamicLogo = () => {
 			<motion.path 
 				strokeWidth={1}
 				initial={{ pathLength: 0, fillOpacity: 0 }}
-				animate={isInView && { pathLength: 1, fill: "#862848", fillOpacity: 1, transition: {duration: 8, ease: [0.17, 0.67, 0.83, 0.67]}}}
+				animate={isInView && { pathLength: 1, fill: "#862848", fillOpacity: 1, transition: {duration: 4, ease: [0.17, 0.67, 0.83, 0.67]}}}
 				d="M799.9,16V0l-50.5,0.1h0h-34.1l0.2,86.5L631.2,1.1v-1h-66.4c-9.8,0-17.8,8-17.8,17.8v40.4
 				c36.1,5.3,63.8,36.3,63.8,73.9s-27.7,68.6-63.8,73.9v40.4c0,9.8,8,17.8,17.8,17.8h66.6l-0.2-85.6l84.4,85.5v0.1h66.6
 				c9.8,0,17.8-8,17.8-17.8V17.9C800,17.3,800,16.6,799.9,16L799.9,16z"/>
@@ -41,7 +41,7 @@ export const DynamicLogo = () => {
 			<motion.path 
 				strokeWidth={1}
 				initial={{ pathLength: 0, fillOpacity: 0 }}
-				animate={isInView && { pathLength: 1, fill: "#862848", fillOpacity: 1, transition: {duration: 8, ease: [0.17, 0.67, 0.83, 0.67]}}}
+				animate={isInView && { pathLength: 1, fill: "#862848", fillOpacity: 1, transition: {duration: 4, ease: [0.17, 0.67, 0.83, 0.67]}}}
 				d="M461.3,132.2c0-38,28.4-69.4,65.2-74.1V32.3l0,0V0l-50.5,0.1h0h-35.5l-40.4,40.4L359.7,0.1h-68.4
 				c-9.8,0-17.8,8-17.8,17.8v228.6c0,9.8,8,17.8,17.8,17.8h13.3l0,0h32.3v0h21l-0.2-85.6l42.2,42.2h0.2l41.4-41.4l0.4,84.8h66.7
 				c9.8,0,17.8-8,17.8-17.8v-40.2C489.7,201.6,461.3,170.2,461.3,132.2L461.3,132.2z"/>
@@ -102,7 +102,7 @@ export const DynamicLogo = () => {
 			<motion.path 
 				strokeWidth={1}
 				initial={{ pathLength: 0, fillOpacity: 0 }}
-				animate={isInView && { pathLength: 1, fill: "#862848", fillOpacity: 1, transition: {duration: 8, ease: [0.17, 0.67, 0.83, 0.67]}}}
+				animate={isInView && { pathLength: 1, fill: "#862848", fillOpacity: 1, transition: {duration: 4, ease: [0.17, 0.67, 0.83, 0.67]}}}
 				d="M252.7,0l-50.4,0.1h0H17.8C8,0.1,0,8.1,0,17.9v228.6c0,9.8,8,17.8,17.8,17.8h66.4v-42.8h84.1v42.8h52.3l0,0
 				h32.3v-15.6c0.1-0.7,0.1-1.5,0.1-2.2V17.9c0-1.2-0.1-2.4-0.4-3.6L252.7,0L252.7,0z M168.3,125.1c0,4.9-4,8.9-8.9,8.9H93.1
 				c-4.9,0-8.9-4-8.9-8.9V99c0-4.9,4-8.9,8.9-8.9h66.3c4.9,0,8.9,4,8.9,8.9C168.3,99,168.3,125.1,168.3,125.1z"/>

@@ -11,8 +11,6 @@ export const Companies = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const {t} = useTranslation();
-
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
@@ -27,7 +25,7 @@ export const Companies = () => {
 
   return (
     <div id="marcas" className="lg:py-20">
-      <Subtitle subtitle={t("companies_header")} />
+      <Subtitle subtitle="Estas compañías confían en nosotros" />
 
         <AnimatePresence custom={currentImageIndex}>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">

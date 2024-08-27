@@ -4,7 +4,6 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 
 import { cn } from "@/lib/utils";
-import Faqs from "./faqs";
 import { FoldableMap } from "./foldable-map";
 import { Subtitle } from "../ui/subtitle";
  

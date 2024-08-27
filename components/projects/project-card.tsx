@@ -4,7 +4,7 @@ import { IProject } from '@/interfaces/projects';
 
 export const ProjectCard = ({project, setProjectSelected, setOpenModal}:{project:IProject, setProjectSelected: Dispatch<SetStateAction<IProject>>, setOpenModal: Dispatch<SetStateAction<boolean>>;}) => {
 
-  const {category, client, img, title, icon} = project;
+  const {category, client, img, title, icon, desc} = project;
 
   const handleSelect = () => {
     setProjectSelected(project);
@@ -12,28 +12,23 @@ export const ProjectCard = ({project, setProjectSelected, setOpenModal}:{project
   };
 
   return (
-    <div className="block relative group transition hover:scale-105 hover:-rotate-1 max-w-sm cursor-pointer border rounded-2xl h-fit" onClick={handleSelect}>
-      <div className="block">
-        <div className="aspect-w-2 aspect-h-1 rounded-t-2xl overflow-hidden bg-gray-100 max-h-[250px]">
-          <img src={img} loading="lazy" className="object-center object-cover w-full h-full" />
-        </div>
-
-        <div className="p-2 space-y-1">
-          <div className="flex items-start justify-between gap-4">
-            <h3 className="flex-1 text-base font-medium text-amn-darker dark:text-slate-300">
-              {title}
-            </h3>
-
-            <span className="mt-1 shrink-0 text-xs items-center gap-1 capitalize flex flex-col">
-              <img src={icon} alt="" className="w-4 h-4" />
-              {client}
-            </span>
+    <div className="flex items-center justify-center cursor-pointer transition w-full" onClick={handleSelect}>
+      <div className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-800 rounded-xl border max-w-xl">
+        <div className="flex justify-between px-2 py-3">
+          <div className="flex items-center">
+            <img className="h-11 w-11 rounded-full" src="/iso1.svg"/>
+            <div className="ml-1.5 text-sm leading-tight">
+              <span className="text-slate-900 dark:text-white font-bold block ">{title}</span>
+              <span className="text-gray-500 dark:text-gray-400 font-normal block capitalize">@{category}</span>
+            </div>
           </div>
-
-          <p className="text-sm text-gray-500 capitalize">
-            {category}
-          </p>
+          <div className="group relative">
+            <img src={icon} alt={client} className='h-6 w-6' />
+            <span className="absolute opacity-0 group-hover:opacity-100 transition text-xs capitalize group-hover:-translate-x-10 duration-500">{client}</span>
+          </div>
         </div>
+        <p className="text-slate-900 dark:text-white block text-sm lg:text-md leading-snug mt-3 px-2">{desc.substring(0, 80)}...</p>
+        <img className="mt-2 rounded-b-2xl border border-gray-100 dark:border-gray-700 w-full" src={img}/>
       </div>
     </div>
   )

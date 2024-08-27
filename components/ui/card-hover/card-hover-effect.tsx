@@ -20,11 +20,6 @@ export const HoverEffect = ({
 
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const {t} = useTranslation();
-
-  const newTitle = t("services_titles").split("."); 
-  const newDescription = t("services_descriptions").split("."); 
-
   return (
     <div
       className={cn(
@@ -58,8 +53,8 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <div className="flex items-center">{item.icon}</div>
-            <CardTitle>{ newTitle[idx]}</CardTitle>
-            <CardDescription>{newDescription[idx]}</CardDescription>
+            <CardTitle>{ item.title}</CardTitle>
+            <CardDescription>{item.description}</CardDescription>
           </Card>
         </div>
       ))}

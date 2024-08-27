@@ -7,16 +7,16 @@ import {Plans} from "@/components/homepage/plans/page";
 import Services from "@/components/homepage/services";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 
-export default async function Home({ params: locale }:{ params: {locale :string} }) {    
+export default async function Home() {    
   return <TracingBeam>
     <div className="max-w-[1640px] mx-auto">
-      <Hero locale={locale.locale} />
-      <Features locale={locale.locale} />
-      <Services locale={locale.locale} />
-      <WeCreate locale={locale.locale} />
+      <Hero />
+      <Features />
+      <Services />
+      <WeCreate />
       <Plans />
       <Companies />
-      <WeBuild locale={locale.locale} />
+      <WeBuild />
     </div>
     </TracingBeam>;
 }

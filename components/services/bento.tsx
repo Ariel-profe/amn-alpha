@@ -6,7 +6,6 @@ import { MdOutlineShoppingCartCheckout } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LuPalette } from "react-icons/lu";
 
-
 const BentoGridItem = ({
     className,
     title,

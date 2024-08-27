@@ -5,6 +5,7 @@ import { MoonIcon, SunIcon } from "lucide-react"
 import { useTheme } from "next-themes"
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import { FaMoon, FaSun } from "react-icons/fa6";
 
 export const Switch = ({
   checked,
@@ -22,6 +23,7 @@ export const Switch = ({
           checked === "light" ? "bg-amn-light" : "bg-slate-700 border-slate-500"
         )}
       >
+        <FaMoon size={15} className={`absolute left-1 text-slate-100`} />
         <motion.div
           initial={{
             width: "15px",
@@ -48,6 +50,8 @@ export const Switch = ({
           className="hidden"
           id="checkbox"
         />
+          <FaSun size={15} className={`absolute right-1 text-slate-300`} />
+        
       </label>
     </form>
   );
@@ -60,5 +64,3 @@ export function ThemeToggle() {
       <Switch checked={theme} setChecked={() => setTheme(theme === "dark" ? "light" : "dark")} />
   )
 }
-
-     
