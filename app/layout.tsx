@@ -31,7 +31,7 @@ export default async function RootLayout({
             <div className='flex flex-col'>
               <Navbar />
               <FloatingNavDemo />
-              <main className='flex-grow border-b-2  pb-10'>
+              <main className='flex-grow border-b-2 pb-10'>
                 {children}
               </main>
               <Footer />

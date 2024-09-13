@@ -1,11 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { MoonIcon, SunIcon } from "lucide-react"
 import { useTheme } from "next-themes"
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
-import { FaMoon, FaSun } from "react-icons/fa6";
+import { GoSun } from "react-icons/go";
+import { FiMoon } from "react-icons/fi";
 
 export const Switch = ({
   checked,
@@ -23,7 +23,7 @@ export const Switch = ({
           checked === "light" ? "bg-amn-light" : "bg-slate-700 border-slate-500"
         )}
       >
-        <FaMoon size={15} className={`absolute left-1 text-slate-100`} />
+        <FiMoon size={17} className={`absolute left-1 text-slate-100`} />
         <motion.div
           initial={{
             width: "15px",
@@ -50,8 +50,7 @@ export const Switch = ({
           className="hidden"
           id="checkbox"
         />
-          <FaSun size={15} className={`absolute right-1 text-slate-300`} />
-        
+          <GoSun size={17} className={`absolute right-1 text-slate-300`} />
       </label>
     </form>
   );

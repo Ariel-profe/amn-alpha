@@ -7,7 +7,6 @@ const Services = async() => {
 
   return (
     <div className="flex flex-col items-center justify-center " id="servicios">
-      <Subtitle subtitle="Lo que podemos ofrecerte" />
       <CardHoverEffectDemo cardsArray={homepageServices} />
     </div>
   )

@@ -208,7 +208,7 @@ export function TypewriterEffectSmoothDemo() {
       },
       {
         text: pathname.includes("/en") ? "AMN Consultant IT" : "AMN Consultora Informática",
-        className: "text-amn-dark dark:text-amn-light",
+        className: "text-amn-dark dark:text-amn-dark",
       },
     ];
     return (
