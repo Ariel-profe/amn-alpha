@@ -21,7 +21,7 @@ export default async function RootLayout({
   return (
     <html className='dark'>
       <link rel="icon" href="/iso1.svg" sizes="any" />
-      <body className={`${font.className} bg-slate-100 dark:bg-gray-900 overflow-y-scroll overflow-x-hidden max-w-[1990px] mx-auto px-3`}>
+      <body className={`${font.className} bg-slate-200 dark:bg-[#070b14] overflow-y-scroll overflow-x-hidden max-w-[1990px] mx-auto px-3`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"

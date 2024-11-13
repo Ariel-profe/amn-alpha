@@ -3,14 +3,12 @@ import Image from "next/image";
 
 const Logo = () => {
     return ( 
-        <div>
-            <Image 
-                src="/logo.svg" 
-                width={90} 
-                height={90} 
-                alt="logo"
-            />
-        </div> 
+        <img 
+            src="/logo.webp" 
+            width={90} 
+            height={90} 
+            alt="logo"
+        />
     );
 }
  

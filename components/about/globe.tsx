@@ -1,6 +1,6 @@
 "use client";
+
 import React from "react";
-import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { Subtitle } from "../ui/subtitle";
 
@@ -396,14 +396,11 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="h-[60vh] lg:h-[120vh] relative w-full">
-      <div className="flex flex-col items-center justify-center mx-auto w-full relative overflow-hidden h-full">
+    <div className="h-[60vh] lg:h-screen relative w-full">
+      <Subtitle subtitle="Conectarte con el mundo. Conectarnos entre todos" />
        
-        <Subtitle subtitle="Conectarte con el mundo. Conectarnos entre todos" />
-       
-        <div className="w-full h-80 lg:h-[700px] z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
-        </div>
+      <div className="w-full h-80 lg:h-[600px] z-20 relative">
+        <World data={sampleArcs} globeConfig={globeConfig} />
       </div>
     </div>
   );

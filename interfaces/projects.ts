@@ -3,7 +3,7 @@ export interface IProject {
     title: string;
     category: "desarrollo web" | "gestion de contenido" | "servicio it" | "marketing";
     client: string;
-    img: string;
+    image: string;
     desc: string;
     tags?: {name: string, color: string}[];
     icon: string;

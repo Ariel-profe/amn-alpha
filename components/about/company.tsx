@@ -6,7 +6,7 @@ import { Subtitle } from "../ui/subtitle";
 const Company = () => {
     return (   
         <div id="empresa" className="mx-auto relative w-full flex flex-col items-center justify-center mt-10 lg:mt-10">
-            <Subtitle subtitle="Este es nuestro lugar en el mundo" />
+            <Subtitle subtitle="Proporcionamos servicios y productos para dar soluciones personalizadas e innovadoras" />
             <p className="lg:text-xl font-normal text-slate-500 max-w-lg text-center mx-auto">
                 Creamos, diseñamos y desarrollamos en un ambiente único y agradable
             </p>

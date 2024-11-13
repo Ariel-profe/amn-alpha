@@ -129,7 +129,7 @@ export const TypewriterEffectSmooth = ({
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
-                  className={cn(`dark:text-white text-black `, word.className)}
+                  className={cn(`dark:text-slate-400 text-black `, word.className)}
                 >
                   {char}
                 </span>
@@ -159,7 +159,7 @@ export const TypewriterEffectSmooth = ({
         }}
       >
         <div
-          className="text-xs sm:text-base md:text-xl lg:text:3xl xl:text-5xl font-bold"
+          className="text-xs sm:text-base md:text-lg lg:text:xl xl:text-3xl font-bold"
           style={{
             whiteSpace: "nowrap",
           }}
@@ -181,7 +181,7 @@ export const TypewriterEffectSmooth = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-amn-dark",
+          "block rounded-sm w-[4px]  h-4 sm:h-6 xl:h-12 bg-amn-light",
           cursorClassName
         )}
       ></motion.span>
@@ -195,40 +195,25 @@ export function TypewriterEffectSmoothDemo() {
 
     const words = [
       {
-        text: pathname.includes("/en") ? "Improve" : "Haz",
+        text: pathname.includes("/en") ? "Improve" : "Lograremos",
       },
       {
-        text: pathname.includes("/en") ? "your" : "crecer",
+        text: pathname.includes("/en") ? "your" : "que tu",
       },
       {
-        text: pathname.includes("/en") ? "company" : "tu negocio",
+        text: pathname.includes("/en") ? "company" : "negocio",
       },
       {
-        text: pathname.includes("/en") ? "with" : "con",
+        text: pathname.includes("/en") ? "with" : "crezca",
       },
       {
-        text: pathname.includes("/en") ? "AMN Consultant IT" : "AMN Consultora Informática",
-        className: "text-amn-dark dark:text-amn-dark",
+        text: pathname.includes("/en") ? "sin límites" : "sin límites",
+        className: "text-amn-dark dark:text-amn-light",
       },
     ];
     return (
-      <div className="hidden md:flex flex-col items-center justify-center h-[20rem]  ">
-        <p className="text-neutral-600 dark:text-neutral-200 text-base sm:text-lg">
-          {pathname.includes("/en") ? "The road to excellence begins here" : "El camino a la excelencia comienza aquí"}
-        </p>
+      <div className="flex flex-col items-center justify-center">
         <TypewriterEffectSmooth words={words} />
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-          <Button size="lg">
-            <Link href="/servicios">
-                {pathname.includes("/en") ? "Services" : "Servicios"}
-            </Link>
-          </Button>
-          <Button variant="secondary" size="lg">
-            <Link href="/contacto">
-                {pathname.includes("/en") ? "Contact" : "Contacto"}
-            </Link>
-          </Button>
-        </div>
       </div>
     );
   }

@@ -4,7 +4,7 @@ import { IProject } from '@/interfaces/projects';
 
 export const ProjectCard = ({project, setProjectSelected, setOpenModal}:{project:IProject, setProjectSelected: Dispatch<SetStateAction<IProject>>, setOpenModal: Dispatch<SetStateAction<boolean>>;}) => {
 
-  const {category, client, img, title, icon, desc} = project;
+  const {category, client, image, title, icon, desc} = project;
 
   const handleSelect = () => {
     setProjectSelected(project);
@@ -28,7 +28,7 @@ export const ProjectCard = ({project, setProjectSelected, setOpenModal}:{project
           </div>
         </div>
         <p className="text-slate-900 dark:text-white block text-sm lg:text-md leading-snug mt-3 px-2">{desc.substring(0, 80)}...</p>
-        <img className="mt-2 rounded-b-2xl border border-gray-100 dark:border-gray-700 w-full" src={img}/>
+        <img className="mt-2 rounded-b-2xl border border-gray-100 dark:border-gray-700 w-full" src={image}/>
       </div>
     </div>
   )

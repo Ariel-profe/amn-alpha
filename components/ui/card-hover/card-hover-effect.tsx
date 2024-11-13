@@ -23,7 +23,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10",
+        "grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 py-10",
         className
       )}
     >
@@ -54,7 +54,7 @@ export const HoverEffect = ({
           <Card>
             <div className="flex items-center">{item.icon}</div>
             <CardTitle>{ item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <CardDescription className="hidden md:block">{item.description}</CardDescription>
           </Card>
         </div>
       ))}
