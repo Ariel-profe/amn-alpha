@@ -24,7 +24,7 @@ export const Hero = () => {
       </div>
       {/* Text Hero */}
       <motion.div
-        initial={{x: '250%'}}
+        initial={{x: '152%'}}
         animate={{x: 0, transition:{ duration: 2}}}
         className={`${poppins.className} flex flex-col items-center justify-center gap-2 lg:w-1/2 lg:-ml-40 max-w-[510px]`}
       >

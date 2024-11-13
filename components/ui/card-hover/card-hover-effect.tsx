@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
 
 export const HoverEffect = ({
   items,
