@@ -10,7 +10,6 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet"
 
-import { ThemeToggle } from "../theme-toggle";
 // import LanguageChanger from "@/components/language-changer";
 
 const ActionButtons = () => {
@@ -23,10 +22,9 @@ const ActionButtons = () => {
                 </SheetTrigger>
                 <SheetContent>
                     <SheetHeader>
-                        <div className="flex items-center gap-x-1 mb-10">
-                            <ThemeToggle />
-                            {/* <LanguageChanger /> */}
-                        </div>
+                        {/* <div className="flex items-center gap-x-1 mb-10">
+                            <LanguageChanger />
+                        </div> */}
                         <SheetDescription className="flex flex-col space-y-4 items-start w-full text-lg text-amn-darker dark:text-slate-300 mt-10">
                             <SheetClose asChild> 
                                 <Link href="/"> Inicio </Link>
@@ -49,10 +47,9 @@ const ActionButtons = () => {
             </Sheet>
         </div>
 
-        <div className="hidden lg:flex lg:items-center gap-x-2">
-            <ThemeToggle />
-            {/* <LanguageChanger /> */}
-        </div>
+        {/* <div className="hidden lg:flex lg:items-center gap-x-2">
+            <LanguageChanger />
+        </div> */}
     </div> 
     );
 }

@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 import Navbar from '@/components/ui/navbar/page';
 import { Footer } from '@/components/ui/footer';
-import { ThemeProvider } from '@/components/theme-provider';
 import { FloatingNavDemo } from '@/components/ui/navbar/floating-navbar';
 
 const font = Outfit({ subsets: ['latin'] })
@@ -21,13 +20,7 @@ export default async function RootLayout({
   return (
     <html className='dark'>
       <link rel="icon" href="/iso1.svg" sizes="any" />
-      <body className={`${font.className} bg-slate-200 dark:bg-[#070b14] overflow-y-scroll overflow-x-hidden max-w-[1990px] mx-auto px-3`}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+      <body className={`${font.className} bg-background overflow-y-scroll overflow-x-hidden max-w-[1990px] mx-auto px-3`}>
             <div className='flex flex-col'>
               <Navbar />
               <FloatingNavDemo />
@@ -36,7 +29,6 @@ export default async function RootLayout({
               </main>
               <Footer />
             </div>
-          </ThemeProvider>
       </body>
     </html>
   )

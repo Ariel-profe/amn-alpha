@@ -18,13 +18,13 @@ export const Hero = () => {
           />
         <motion.div 
           initial={{opacity: 0, scale: 0}}
-          animate={{opacity: 1, scale: 1, transition: {delay: 0.9, duration: 1}}}
+          animate={{opacity: 1, scale: 1, transition: {delay: 1.9, duration: 1}}}
           className="absolute -right-14 top-1 rounded-full blur-[100px] w-60 lg:h-60 bg-white"
         ></motion.div>
       </div>
       {/* Text Hero */}
       <motion.div
-        initial={{x: '152%'}}
+        initial={{x: '200%'}}
         animate={{x: 0, transition:{ duration: 2}}}
         className={`${poppins.className} flex flex-col items-center justify-center gap-2 lg:w-1/2 lg:-ml-40 max-w-[510px]`}
       >
