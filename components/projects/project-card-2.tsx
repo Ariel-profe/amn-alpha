@@ -1,7 +1,8 @@
 "use client";
 
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useRef } from "react";
 
+import { motion, useScroll, useTransform } from "framer-motion";
 import { IProject } from "@/interfaces/projects";
 import { cn } from "@/lib/utils";
 
@@ -12,15 +13,24 @@ export function CardDemo(
     setOpenModal: Dispatch<SetStateAction<boolean>>
   }) {
 
-  const {category, client, image, title, icon, desc} = project;
+  const {category, client, image, title, icon} = project;
 
   const handleSelect = () => {
     setProjectSelected(project);
     setOpenModal(true);
   };
 
+  const cardRef = useRef(null);
+
+    const {scrollYProgress} = useScroll({
+        target: cardRef,
+        offset: ["start end", "end end"]
+    });
+
+    const scale = useTransform(scrollYProgress, [0, 1], [.6, 1])
+
   return (
-    <div className="w-full group/card">
+    <motion.div className="w-full group/card"  ref={cardRef} style={{scale}}>
       <div
         className={cn(
           "cursor-pointer overflow-hidden relative card h-80 rounded-md shadow-xl mx-auto flex flex-col justify-between",
@@ -51,6 +61,6 @@ export function CardDemo(
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
