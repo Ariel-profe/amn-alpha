@@ -13,7 +13,7 @@ const Faqs = () => {
 
             <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                    <AccordionTrigger>En dónde nos encontramos?</AccordionTrigger>
+                    <AccordionTrigger>¿En dónde nos encontramos?</AccordionTrigger>
                     <AccordionContent>
                         Nuestras oficinas se encuentran en la provincia de Mendoza, Argentina. Pero recordá que trabajamos para clientes de todo el mundo.
                     </AccordionContent>
@@ -22,7 +22,7 @@ const Faqs = () => {
                 <AccordionItem value="item-2">
                     <AccordionTrigger>¿Cómo me contacto?</AccordionTrigger>
                     <AccordionContent>
-                        Podes hacerlo desde esta misma sección con el formulario de contacto (nos llegará un mail), o a través de nuestras redes que están colocadas en el pie de todas las páginas.
+                        Podes hacerlo desde esta misma sección con el formulario de contacto (nos llegará un mail), a nuestro teléfono: 2615535251 o a través de nuestras redes que están colocadas en el pie de todas las páginas.
                     </AccordionContent>
                 </AccordionItem>
 
@@ -31,7 +31,7 @@ const Faqs = () => {
                         ¿Qué planes existen ?
                     </AccordionTrigger>
                     <AccordionContent>
-                        Muchos. Según tus necesidades nosotros abordarmos y planificamos el plan que se ajuste a vos. Todos nuestros planes se pueden modificar sin ningún problema para hacerlo perfecto a tu medida.
+                        Muchos. Según tus necesidades nosotros abordamos y planificamos la opción que se ajuste a vos. Al ser personalizado se pueden modificar sin ningún problema para hacerlo perfecto a tu medida.
                     </AccordionContent>
                 </AccordionItem>
             
@@ -40,7 +40,7 @@ const Faqs = () => {
                         ¿Qué soporte me brindan?
                     </AccordionTrigger>
                     <AccordionContent>
-                        Te ofrecemos un soporte activo, en el que vas a poder contactarte con nosotros sin barreras ni problemas. Tus necesidades son de nuestra incumbencia.
+                        Te ofrecemos un soporte activo, en el que vas a poder contactarte con nosotros sin barreras ni problemas. Trabajamos en equipo para resolver cualquier inconveniente que surja
                     </AccordionContent>
                 </AccordionItem>
             </Accordion>

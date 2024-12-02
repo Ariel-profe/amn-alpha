@@ -1,6 +1,5 @@
 'use client';
 
-import Image from "next/image";
 import { Subtitle } from "../ui/subtitle";
 
 const Company = () => {
@@ -83,24 +82,21 @@ const Company = () => {
                 </div>
                 <div className="grid gap-4">
                     <div>
-                        <Image
+                        <img
                         width={500}
                         height={500}
-                        priority
                         className="h-[180px] lg:h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt=""/>
                     </div>
                     <div>
-                        <Image
+                        <img
                         width={500}
                         height={500}
-                        priority
                         className="h-[180px] lg:h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt=""/>
                     </div>
                     <div>
-                        <Image
+                        <img
                         width={500}
                         height={500}
-                        priority
                         className="h-[180px] lg:h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt=""/>
                     </div>
                 </div>

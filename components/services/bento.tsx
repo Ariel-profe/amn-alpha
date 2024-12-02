@@ -69,14 +69,14 @@ const items = [
   },
   {
     title: "MARKETING",
-    description: "Creación y promoción de contenido en línea para atraer tráfico a un sitio web.",
+    description: "Creación y promoción de contenido en línea para atraer tráfico a un sitio web o redes sociales.",
     header: <Skeleton className="bg-[url('/services/marketing.webp')]" />,
     className: "md:col-span-1",
     icon: <MdOutlineShoppingCartCheckout className="h-6 w-6 text-neutral-500" />,
   },
   {
     title: "SERVICIO IT",
-    description: "Instalación, configuración y mantenimiento de sistemas informáticos. Asistencia técnica para solucionar problemas o dar soporte a los usuarios.",
+    description: "Relevamiento de equipos y asesoramiento sobre mejoría de hardware. Instalación, configuración y mantenimiento de sistemas informáticos. Asistencia técnica para solucionar problemas o dar soporte a los usuarios.",
     header: <Skeleton className="bg-[url('/services/it.jpg')]"  />,
     className: "md:col-span-1",
     icon: <IoSettingsOutline className="h-6 w-6 text-neutral-500" />,
@@ -84,7 +84,7 @@ const items = [
   {
     title: "DISEÑO GRÁFICO",
     description:
-      "Producir una imagen visual única y reconocible que represente a una empresa o marca. Creación de diseños visuales atractivos y fáciles de usarProducir una imagen visual única y reconocible que represente a una empresa o marca. Creación de diseños visuales atractivos y fáciles de usar.",
+      "Producir una imagen visual única y reconocible que represente a una empresa o marca. Diseño de carteles para promocionar productos o servicios en plataformas de redes sociales.",
     header: <Skeleton className="bg-[url('/services/design.webp')]"  />,
     className: "md:col-span-2",
     icon: <LuPalette className="h-6 w-6 text-neutral-500" />,

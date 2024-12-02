@@ -40,18 +40,18 @@ export const homepageServices = [
 export const aboutGoals = [
   {
     icon : <div className="bg-white p-4 rounded-full"><CiStar size={22} className="text-amn-semidark" /></div>,
-    title: "MISION",
-    description: "Mejorar continuamente nuestros productos y servicios para satisfacer las necesidades de nuestros clientes, permitiéndonos prosperar como empresa y proveer la mejor atención a nuestros clientes."
+    title: "MISIÓN",
+    description: "Brindar soluciones informáticas innovadoras y personalizadas que mejoren la eficiencia y productividad en las empresas clientes."
   },
   {
     icon : <div className="bg-white p-4 rounded-full"><IoMdPaperPlane size={22} className="text-amn-semidark" /></div>,
-    title: "VISION",
-    description: "Ser reconocidos como la empresa más importante a nivel tecnológico de Argentina y del mundo. Destacando nuestro potencial humano, profesional y estructural."
+    title: "VISIÓN",
+    description: "Ser líderes en la consultoría informática, destacando nuestro potencial humano, profesional y estructural. Queremos acercar propuestas y asesoramiento que ayuden a alcanzar el máximo potencial de las empresas."
   },
   {
     icon : <div className="bg-white p-4 rounded-full"><RxTarget size={22} className="text-amn-semidark" /></div>,
     title: "VALORES",
-    description: "Responsabilidad, Honestidad, Desarrollo profesional y personal. Calidad. Resolución de problemas."
+    description: "Responsabilidad, honestidad, desarrollo profesional y personal, calidad, resolución de problemas."
   }
 ];
 

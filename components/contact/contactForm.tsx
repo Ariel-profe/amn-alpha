@@ -17,7 +17,7 @@ export function ContactForm() {
       <div className="w-full mx-auto">
         <Subtitle subtitle="Formulario de contacto" className="text-start" />
         <p className="text-slate-600 text-lg mt-2 dark:text-neutral-300">
-          Envianos un email con cualquier duda que tengas y las responderemos al instante.
+          Envianos un email con cualquier duda que tengas y las responderemos a la brevedad posible.
         </p>
 
         <div className="flex flex-col lg:flex-row w-full gap-5 justify-between mt-10">

@@ -13,11 +13,14 @@ export const services: { title: string, description: string, href:string;}[] = [
   {title: "Diseño", description: "Imagen. Logo. Marca. Packaging. UX/UI.", href: "diseno_grafico"},
 ];
 
-export const carousel_images = [
-  {url: "/images/logo/logo-1.svg", alt: "Logo"},
-  {url: "/images/logo/logo-3.svg", alt: "Logo"},
-  {url: "/images/logo/logo-4.svg", alt: "Logo"},
-  {url: "/images/logo/logo-5.svg", alt: "Logo"},
-  {url: "/images/logo/logo-6.svg", alt: "Logo"},
-  {url: "/images/logo/logo-7.svg", alt: "Logo"}
+export const brands = [
+  {url: "/works/02-onic/logo.svg", alt: "onic"},
+  {url: "/works/03-instituto-san-pablo/logo.svg", alt: "san-pablo"},
+  {url: "/works/16-titulizar/iso.svg", alt: "titulizar"},
+  {url: "/works/18-empretur/iso.svg", alt: "empretur"},
+  {url: "/works/22-rg/iso.svg", alt: "rg"},
+  {url: "/works/23-valvtronic/logo.svg", alt: "valvtronic"},
+  {url: "/works/01-monica/logo.svg", alt: "valvtronic"},
+  {url: "/works/23-valvtronic/logo.svg", alt: "valvtronic"},
+  
 ];

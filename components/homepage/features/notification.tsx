@@ -20,29 +20,29 @@ let notifications = [
   {
     name: "React Js",
     description: "Desarrollo Web",
-    time: "15m ago",
+    time: "Frontend",
 
     icon: FaReact,
     color: "#44e0eb",
   },
   {
     name: "Figma",
-    description: "Diseno grafico",
-    time: "10m ago",
+    description: "Diseño grafico",
+    time: "UX/UI",
     icon: FaFigma,
     color: "#FFB800",
   },
   {
     name: "Next JS",
     description: "Desarrollo web",
-    time: "5m ago",
+    time: "Fullstack",
     icon: TbBrandNextjs,
     color: "#FF3D71",
   },
   {
     name: "PostgreSQL",
-    description: "Base de datos",
-    time: "2m ago",
+    description: "Backend",
+    time: "Base de datos",
     icon: SiPostgresql,
     color: "#1E86FF",
   },
@@ -54,7 +54,7 @@ const Notification = ({ name, description, icon: Icon, color, time }: Item) => {
   return (
     <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-2",
+        "relative mx-auto min-h-fit w-full max-w-[400px] overflow-hidden rounded-2xl p-2",
         // animation styles
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
         // light styles

@@ -15,15 +15,15 @@ import Link from "next/link";
                   
                   <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                       <div className="font-bold text-sm lg:text-lg">Redes sociales</div>
-                      <a href="" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
+                      <a href="https://www.instagram.com/amn.consultorainformatica/" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
                           <FaInstagram />
                           <span className="text-sm ml-[6px]">Instagram</span>    
                       </a>
-                      <a href="" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
+                      <a href="https://www.facebook.com/amn.consultorainformatica" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
                           <CiFacebook />
                           <span className="text-sm ml-[6px]">Facebook</span>    
                       </a>
-                      <a href="" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
+                      <a href="https://api.whatsapp.com/send?phone=2615535251" target="_blank" className="flex flex-row items-center justify-between my-[15px] cursor-pointer md:hover:underline">
                           <FaWhatsapp />
                           <span className="text-sm ml-[6px]">Whatsapp</span>    
                       </a>
