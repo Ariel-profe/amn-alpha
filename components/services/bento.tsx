@@ -62,7 +62,7 @@ const Skeleton = ({className}: {className:string}) => (
 const items = [
   {
     title: "DESARROLLO Y PROGRAMACION",
-    description: "Creacion y mantenimiento de aplicaciones, sitios y páginas web personalizadas.",
+    description: "Creación y mantenimiento de aplicaciones, sitios y páginas web personalizadas.",
     header: <Skeleton className="bg-[url('/services/development.jpg')]" />,
     className: "md:col-span-2",
     icon: <FaCode className="h-6 w-6 text-neutral-500" />,

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
 import { AnimatedListDemo } from "./notification";
+import { ShineButton } from "@/components/ui/shine-button";
 
 const Features = () => {
 
@@ -11,9 +11,9 @@ const Features = () => {
         <h3 className="text-xl lg:text-5xl text-center max-w-[600px]">
           Tenemos las herramientas más actuales del mercado para que tu negocio crezca sin límites
         </h3>
-        <Button size={"lg"}>
+        <ShineButton>
           <Link href={"/tecnologias"}>Tecnologías</Link>
-        </Button>
+        </ShineButton>
       </div>
       <AnimatedListDemo />
     </div>

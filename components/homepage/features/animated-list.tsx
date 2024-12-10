@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactElement, useEffect, useMemo, useState } from "react";
+import { Children, memo, ReactElement, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 export interface AnimatedListProps {
@@ -9,10 +9,10 @@ export interface AnimatedListProps {
   delay?: number;
 }
 
-export const AnimatedList = React.memo(
+export const AnimatedList = memo(
   ({ className, children, delay = 3000 }: AnimatedListProps) => {
     const [index, setIndex] = useState(0);
-    const childrenArray = React.Children.toArray(children);
+    const childrenArray = Children.toArray(children);
 
     useEffect(() => {
       const interval = setInterval(() => {

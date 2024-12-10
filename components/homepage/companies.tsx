@@ -1,11 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { brands } from "@/utils/navigation-links";
+
 import { Subtitle } from "../ui/subtitle";
-import { useTranslation } from "react-i18next";
+import { brands } from "@/utils/constants";
 
 export const Companies = () => {
 
@@ -42,12 +41,10 @@ export const Companies = () => {
             exit={{ opacity: 0 }}
             custom={index}
             transition={{ opacity: { duration: 0.5 }}}>
-                <Image
+                <img
                   src={image.url}
                   alt={image.alt}
-                  width={200}
-                  height={200}
-                  className="object-contain h-40 w-40 items-center justify-center flex mx-auto"
+                  className="object-contain h-40 w-40 lg:h-52 lg:w-52 items-center justify-center flex mx-auto"
                   />
               </motion.div>
           ))}

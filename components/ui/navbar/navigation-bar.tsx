@@ -16,6 +16,7 @@ import {
 import Logo from "./logo"
 import { about, services } from "@/utils/navigation-links"
 import { Forward, TransitionLink } from "./transition-link";
+import Link from "next/link";
 
 export function NavigationMenuBar() {
 
@@ -26,7 +27,9 @@ export function NavigationMenuBar() {
         <NavigationMenuList className="hidden lg:flex md:space-x-4">
           <NavigationMenuItem>
             <NavigationMenuTrigger className={`relative ${pathname === "/" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
-              Inicio
+            <Link href="/">
+                Inicio
+              </Link>
               {pathname === "/" && <Forward />}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -61,7 +64,9 @@ export function NavigationMenuBar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger className={`relative ${pathname === "/nosotros" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
-              Nosotros
+              <Link href="/nosotros">
+                Nosotros
+              </Link>
               {pathname === "/nosotros" && <Forward />}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -80,7 +85,9 @@ export function NavigationMenuBar() {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger className={`relative ${pathname === "/servicios" ? 'text-amn-darker dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
-              Servicios
+            <Link href="/servicios">
+                Servicios
+              </Link>
               {pathname === "/servicios" && <Forward />}
             </NavigationMenuTrigger>
             <NavigationMenuContent>

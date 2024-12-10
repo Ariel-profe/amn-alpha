@@ -180,3 +180,14 @@ export const collabApps:ICollabApps[] = [
     height: 32,
   },
 ];
+
+export const brands = [
+  {url: "/works/02-onic/logo.svg", alt: "onic"},
+  {url: "/works/03-instituto-san-pablo/logo.svg", alt: "san-pablo"},
+  {url: "/works/16-titulizar/logo.webp", alt: "titulizar"},
+  {url: "/works/18-empretur/logo.webp", alt: "empretur"},
+  {url: "/works/22-rg/logo.webp", alt: "rg"},
+  {url: "/works/01-monica/logo.svg", alt: "monica-ojeda"},
+  {url: "/works/23-valvtronic/logo.svg", alt: "valvtronic"},
+  {url: "/works/24-osar/logo.webp", alt: "osar"},
+];
