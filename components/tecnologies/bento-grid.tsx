@@ -13,9 +13,9 @@ import {
   CommandList,
 } from "@/components/ui/command";
 
-import { BentoCard, BentoGrid } from "../ui/bento-grid";
 import Marquee from "../ui/marquee";
 import { AnimatedBeamDemo } from "./animated-beam";
+import { BentoCard, BentoGrid } from "../ui/bento-grid";
 
 
 const files = [

@@ -170,7 +170,7 @@ export function Conectivity() {
  
   return (
     <div
-      className="h-[200vh] w-full dark:border dark:border-white/[0.1] rounded-xl relative pt-20 overflow-clip mt-10"
+      className="h-[200vh] w-full dark:border dark:border-white/[0.1] rounded-md relative pt-20 overflow-clip mt-10"
       ref={ref}
     >
       <GoogleGeminiEffect

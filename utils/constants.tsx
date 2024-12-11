@@ -1,59 +1,4 @@
-import { PiMonitor, PiStorefront, PiLock, PiMegaphone, PiAppStoreLogo, PiHeadsetFill } from 'react-icons/pi';
-import { RxTarget } from "react-icons/rx";
-import { CiStar } from "react-icons/ci";
-import { IoMdPaperPlane } from "react-icons/io";
 import { ICollabApps, ICollabContent } from '@/interfaces/interfaces';
-
-export const homepageServices = [
-    {
-        icon : <div className="bg-white p-4 rounded-full"><PiMonitor size={22} className="text-amn-semidark" /></div>,
-        title: "Atención personalizada e integral",
-        description: "Para asegurarnos de cumplir tus expectativas y que el camino hacia tus sueños sea el mejor."
-      },
-      {
-        icon : <div className="bg-white p-4 rounded-full"><PiStorefront size={22} className="text-amn-semidark" /></div>,
-        title: "Equipo altamente capacitado",
-        description: "Profesionales formados con bases sólidas de conocimiento, fundamental para un mejor servicio."
-      },
-      {
-        icon : <div className="bg-white p-4 rounded-full"><PiLock size={22} className="text-amn-semidark" /></div>,
-        title: "Relevamientos, evaluaciones y diagnóstico",
-        description: "Comprender tus necesidades es nuestra tarea. Las evaluamos y elegimos el caminos correcto."
-      },
-      {
-        icon : <div className="bg-white p-4 rounded-full"><PiMegaphone size={22} className="text-amn-semidark" /></div>,
-        title: "Planificación de alternativas",
-        description: "Manejamos y creamos contenido que te ayudará a crecer y a darte presencia en el mercado."
-      },
-      {
-        icon : <div className="bg-white p-4 rounded-full"><PiAppStoreLogo size={22} className="text-amn-semidark" /></div>,
-        title: "Alianzas estratégicas con otras empresas",
-        description: "Establecer un acuerdo formal con otras empresas para compartir recursos, esfuerzo y estrategias."
-      },
-      {
-        icon : <div className="bg-white p-4 rounded-full"><PiHeadsetFill size={22} className="text-amn-semidark" /></div>,
-        title: "Clientes de diferentes rubros",
-        description: "Tenemos el soporte para ofrecer ayuda frente a cualquier problema o preguntas que puedas tener."
-      }
-];
-
-export const aboutGoals = [
-  {
-    icon : <div className="bg-white p-4 rounded-full"><CiStar size={22} className="text-amn-semidark" /></div>,
-    title: "MISIÓN",
-    description: "Brindar soluciones informáticas innovadoras y personalizadas que mejoren la eficiencia y productividad en las empresas clientes."
-  },
-  {
-    icon : <div className="bg-white p-4 rounded-full"><IoMdPaperPlane size={22} className="text-amn-semidark" /></div>,
-    title: "VISIÓN",
-    description: "Ser líderes en la consultoría informática, destacando nuestro potencial humano, profesional y estructural. Queremos acercar propuestas y asesoramiento que ayuden a alcanzar el máximo potencial de las empresas."
-  },
-  {
-    icon : <div className="bg-white p-4 rounded-full"><RxTarget size={22} className="text-amn-semidark" /></div>,
-    title: "VALORES",
-    description: "Responsabilidad, honestidad, desarrollo profesional y personal, calidad, resolución de problemas."
-  }
-];
 
 export const features = [
   {
@@ -191,3 +136,15 @@ export const brands = [
   {url: "/works/23-valvtronic/logo.svg", alt: "valvtronic"},
   {url: "/works/24-osar/logo.webp", alt: "osar"},
 ];
+
+export const galleryAboutImages = [
+  "/images/about/company/gab.webp",
+  "/images/about/company/cup.webp",
+  "/images/about/company/headphones.webp",
+  "/images/about/company/micro.jpg",
+  "/images/about/company/mouse.jpg",
+  "/images/about/company/pad.png",
+  "/images/about/company/screen.webp",
+  "/images/about/company/keyboard.webp",
+  "/images/about/company/gab.webp",
+]
